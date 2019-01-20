@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AJM Global</title>
+	<title>AJM GLOBAL</title>
 	<script src="js/jquery.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="AJM Global - our address is local but our operation is globals">
-	<meta name="keywords" content="AJM global,consulting,ecommerce,ecommerce consulting">
-	<meta name="author" content="AJM Global">
+	<meta name="description" content="AJM GLOBAL - our address is local but our operation is GLOBALs">
+	<meta name="keywords" content="AJM GLOBAL,consulting,ecommerce,ecommerce consulting">
+	<meta name="author" content="AJM GLOBAL">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
 </head>
 <body>
-
+	<div class="loading" id="loading">
+		<div class="loadingImage" id="ldgImg">
+			<image src="assets/ajmSimpleNoBar.png" id="ldgImg"></image>
+			<div class="animator" id="animator"></div>
+		</div>
+	</div>
+	<div class="logo">
+		<image src="assets/ajmSimpleTrans.png" class="image"></image>
+	</div>
+	<div class="desc">
+		<h1 class="sans">Our address is local but our operation is <span class="global">GLOBAL</span></h1>
+		<p class="detail">Our operation and impact spreads GLOBALly. Mainly focusing on GLOBAL ecommerce retail and online web presence, we want to help others following the same path that we are on using our data driven skills paired with the expertise you can trust here at <span class="sans">AJM GLOBAL</span></p>
+	</div>
+	<script>
+		setTimeout(function(){ document.getElementById("animator").style.width = "86%";hide() }, 300);
+		function hide() {
+			setTimeout(function(){ 
+				document.getElementById("ldgImg").style.display = "none";
+				document.getElementById("loading").style.backgroundColor = "transparent"; }, 3000);
+		}
+	</script>
 </body>
 </html>
