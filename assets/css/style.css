@@ -72,6 +72,25 @@ html {
   clear: both;
 }
 
+.jack-ride-left {
+	display:inline-block;
+	float:left;
+}
+.jack-ride-right {
+	display:inline-block;
+	float:right;
+}
+.jack-ride-center {
+	position:absolute;
+	left:50%;
+}
+.header {
+	position:fixed;
+	top:0;
+	bottom:70%;
+	z-index:-1000;
+}
+
 /*small desktops*/
 @media screen and (max-width: 1200px) {
 	.logo {

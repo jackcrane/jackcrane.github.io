@@ -1,0 +1,155 @@
+@import url(colors.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans)
+
+
+body {
+   background-color: white !important;
+}
+
+@media print
+{    
+    .print-noshow *
+    {
+        display: none !important;
+    }
+    .print-show *
+    {
+    	display:block;
+    }
+}
+
+.jack-html {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	padding:0;
+	margin:0;
+	width:100%;
+}
+.jack-body {
+	margin:0;
+	padding:0;
+}
+.toolbar {
+	margin-top:30px;
+}
+.jack-pretty-font {
+	font-family: 'Open Sans', sans-serif;
+}
+/*-------------------------INPUT---------------------*/
+.jack-input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+}
+.jack-input[type=text]:focus {
+	border: 3px solid #555;
+}
+/*----------------------TEXTAREA-----------------------*/
+.jack-textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+}
+.jack-textarea:focus {
+    border: 3px solid #555;
+}
+/*--------------------FLOATS-----------------------*/
+.jack-ride-left {
+	display:inline-block;
+	float:left;
+}
+.jack-ride-right {
+	display:inline-block;
+	float:right;
+}
+.jack-ride-center {
+	position:absolute;
+	left:50%;
+}
+/*------------------------SELECTS----------------------*/
+}
+.jack-select {
+	width:100%;
+	padding:1%;
+	border-style:solid;
+	border-width:2px;
+	border-color:#4CAF50;
+	transition: 0.3s;
+	margin-bottom:2px;
+	margin-top:2px;
+}
+.jack-select:hover {
+	background-color: #4CAF50;
+	color:white;
+}
+/*---------------------------------BUTTONS------------------*/
+.jack-button {
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.3s;
+	border-style:solid;
+	border-width:2px;
+	border-color:var(--border_color);
+	border-radius:8px;
+}
+.jack-button:hover {
+	background-color:var(--background_color);
+	cursor:pointer;
+	color:var(--text_color);
+}
+
+/*---------------------------------RANDOM-------------------*/
+.jack-div-background {
+	background-color:#f2f2f2;
+}
+.jack-half {
+	width:50%;
+}
+.jack-third {
+	/*width:33.333%;*/
+}
+.jack-nomargin {
+	margin:0px;
+}
+/*---------------------------------TOP TOOLBAR---------------*/
+.jack-toolbar-top {
+	position:fixed;
+	top:0;
+	width:100%;
+	padding:10px;
+	background-color:var(--border_color);
+	color:var(--text_color);
+	margin-left:0;
+	margin-bottom:15px;
+}
+.jack-toolbar-bottom {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	padding:10px;
+	background-color:var(--border_color);
+	color:var(--text_color);
+}
+.jack-toolbar-bottom-nocss {
+	position:fixed;
+	bottom:0;
+}
+.jack-border {
+	border-style:solid;
+	border-width:2px;
+	border-color:var(--border_color);
+}
