@@ -11,6 +11,7 @@
 	<meta name="author" content="AJM GLOBAL">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="assets/globe.png"/>
+	<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 	<div class="loading" id="loading">
@@ -28,8 +29,25 @@
 			<p class="detail">Our operation and impact spreads globally. Mainly focusing on global ecommerce retail and online web presence, we want to help others following the same path that we are on using our data driven skills paired with the expertise you can trust here at <span class="sans">AJM GLOBAL</span></p>
 		</div>
 	</div>
+
+
 	<br>
-	<div class="content">adsfa</div>
+	<div class="content">
+		<div class="row">
+		  <div class="column" style="background-color:#aaa;" data-aos="fade-up" data-aos-duration="3000">
+		    <h2>Column 1</h2>
+		    <p>Some text..</p>
+		  </div>
+		  <div class="column" style="background-color:#bbb;">
+		    <h2>Column 2</h2>
+		    <p>Some text..</p>
+		  </div>
+		  <div class="column" style="background-color:#ccc;">
+		    <h2>Column 3</h2>
+		    <p>Some text..</p>
+		  </div>
+		</div>
+	</div>
 	<script>
 		setTimeout(function(){ document.getElementById("animator").style.width = "86%";hide() }, 300);
 		function hide() {
@@ -37,6 +55,7 @@
 				document.getElementById("ldgImg").style.display = "none";
 				document.getElementById("loading").style.backgroundColor = "transparent"; }, 3000);
 		}
+		ScrollReveal().reveal('.column');
 	</script>
 </body>
 </html>

@@ -85,12 +85,37 @@ html {
 	left:50%;
 }
 .header {
-	position:fixed;
+	position:absolute;
 	top:0;
 	bottom:70%;
 	z-index:-1000;
 }
+.header {
+	/*overflow: auto;*/
+}
+.content {
+	position:absolute;
+	top:33.33%;
+	z-index:-100;
+	padding:5%;
+	padding-right:0%;
+	width:95%;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 28%;
+  margin:1%;
+  padding: 10px;
+  /*height: 300px;  Should be removed. Only for demonstration */
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /*small desktops*/
 @media screen and (max-width: 1200px) {
 	.logo {
