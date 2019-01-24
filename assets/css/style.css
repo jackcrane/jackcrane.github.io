@@ -132,6 +132,9 @@ a {
 a:visited {
 	color:#018be0;
 }
+.enforce-print {
+	-webkit-print-color-adjust: exact;
+}
 /*small desktops*/
 @media screen and (max-width: 1200px) {
 	.logo {
