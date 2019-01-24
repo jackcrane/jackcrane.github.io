@@ -1,30 +1,29 @@
 
-<!-- saved from url=(0038)http://www.7sigmarobotics.org/map.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div class="map-container">
+<div class="map-container">
   <canvas id="canvas" width="752" height="570">
   </canvas>
   <div class="inputs">
-    <input type="number" id="longitude" placeholder="Longitude">
-    <input type="number" id="latitude" placeholder="Latitude">
+    <input type="number" id="longitude" placeholder="Longitude" />
+    <input type="number" id="latitude" placeholder="Latitude" />
     <button type="submit" id="input-button">Add Hurricane</button>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <button type="button" id="print_button" onclick="print()">Print Submit Form</button>
-    <button type="button" id="open-Admin Options" disabled="">Open Admin Options</button>
-    <input type="password" id="unlock-admin-options" placeholder="Unlock Admin Options" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"><button type="button" id="view" onclick="
-    document.getElementById(&quot;unlock-admin-options&quot;).type=&quot;text&quot;
-    document.getElementById(&quot;view&quot;).hidden = true
-    document.getElementById(&quot;hide&quot;).hidden = false
-    document.getElementById(&quot;unlock-admin-options&quot;).style.backgroundColor = &quot;red&quot;
-    document.getElementById(&quot;unlock-admin-options&quot;).style.Color = &quot;white&quot;
-    document.getElementById(&quot;unlock-admin-options&quot;).placeholder = &quot;The password is visible&quot;
-    ">View Password</button><button type="button" id="hide" onclick="
-    document.getElementById(&quot;unlock-admin-options&quot;).type=&quot;password&quot;
-    document.getElementById(&quot;view&quot;).hidden = false 
-    document.getElementById(&quot;hide&quot;).hidden = true 
-    document.getElementById(&quot;unlock-admin-options&quot;).style.backgroundColor = &quot;white&quot;
-    document.getElementById(&quot;unlock-admin-options&quot;).style.Color = &quot;black&quot;
-    document.getElementById(&quot;unlock-admin-options&quot;).placeholder = &quot;Unlock Admin Options&quot;
-    " hidden="">Hide Password</button>
+    <button type="button" id="print_button" onClick="print()">Print Submit Form</button>
+    <button type="button" id="open-Admin Options" disabled>Open Admin Options</button>
+    <input type="password" id="unlock-admin-options" placeholder="Unlock Admin Options"><button type="button" id="view" onclick='
+    document.getElementById("unlock-admin-options").type="text"
+    document.getElementById("view").hidden = true
+    document.getElementById("hide").hidden = false
+    document.getElementById("unlock-admin-options").style.backgroundColor = "red"
+    document.getElementById("unlock-admin-options").style.Color = "white"
+    document.getElementById("unlock-admin-options").placeholder = "The password is visible"
+    '>View Password</button><button type="button" id="hide" onclick='
+    document.getElementById("unlock-admin-options").type="password"
+    document.getElementById("view").hidden = false 
+    document.getElementById("hide").hidden = true 
+    document.getElementById("unlock-admin-options").style.backgroundColor = "white"
+    document.getElementById("unlock-admin-options").style.Color = "black"
+    document.getElementById("unlock-admin-options").placeholder = "Unlock Admin Options"
+    ' hidden>Hide Password</button>
     <!-- <input type="button" 
   onClick="window.print()" 
   value="Print This Page"/> -->
@@ -37,32 +36,32 @@
       <h2 style="font-weight: normal">Do you want the system to calculate:</h2>
       <hr>
       <div class="control-panel-options">
-      <span onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Set all options to true or false&#39;">Select/deselect all<input data-variable="checkall" type="checkbox"></span>
+      <span onmouseover="document.getElementById('desc').innerHTML = 'Set all options to true or false'">Select/deselect all<input data-variable="checkall" type="checkbox"></span>
       </div>
       <hr>
       <div class="control-panel-options">
-        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of how far the hurricane has travelled.&#39;">Distance traveled<input data-variable="distapprove" type="checkbox"></span>
-        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of how fast the hurricane has been travelling.&#39;">Speed<input data-variable="speedapprove" type="checkbox"></span>
-        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of the direction the hurricane has been travelling. THIS FEATURE IS NOT PERFECT.&#39;">Direction<input data-variable="directapprove" type="checkbox"></span>
-        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of how far the hurricane is from the island of montserrat.&#39;">Distance to island<input data-variable="distislandapprove" type="checkbox"></span>
-        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the calculated time of landfall.&#39;">ETA<input data-variable="etaapprove" type="checkbox"></span>
-        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Change the admin password&#39;">Admin Password<input type="password" data-variable="admin-password" id="admin-pass" value="science" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"></span><button type="button" id="view_a" onclick="
-    document.getElementById(&quot;admin-pass&quot;).type=&quot;text&quot;
-    document.getElementById(&quot;view_a&quot;).hidden = true
-    document.getElementById(&quot;hide_a&quot;).hidden = false
-    document.getElementById(&quot;admin-pass&quot;).style.backgroundColor = &quot;red&quot;
-    document.getElementById(&quot;admin-pass&quot;).style.Color = &quot;white&quot;
-    document.getElementById(&quot;admin-pass&quot;).placeholder = &quot;The password is visible&quot;
-    ">View Password</button><button type="button" id="hide_a" onclick="
-    document.getElementById(&quot;admin-pass&quot;).type=&quot;password&quot;
-    document.getElementById(&quot;view_a&quot;).hidden = false 
-    document.getElementById(&quot;hide_a&quot;).hidden = true 
-    document.getElementById(&quot;admin-pass&quot;).style.backgroundColor = &quot;white&quot;
-    document.getElementById(&quot;admin-pass&quot;).style.Color = &quot;black&quot;
-    document.getElementById(&quot;admin-pass&quot;).placeholder = &quot;Unlock Admin Options&quot;
-    " hidden="">Hide Password</button>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of how far the hurricane has travelled.'">Distance traveled<input data-variable="distapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of how fast the hurricane has been travelling.'">Speed<input data-variable="speedapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of the direction the hurricane has been travelling. THIS FEATURE IS NOT PERFECT.'">Direction<input data-variable="directapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the measurement of how far the hurricane is from the island of montserrat.'">Distance to island<input data-variable="distislandapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Show the students the calculated time of landfall.'">ETA<input data-variable="etaapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById('desc').innerHMTL = 'Hover over an option'" onmouseover="document.getElementById('desc').innerHTML = 'Change the admin password'">Admin Password<input type="password" data-variable="admin-password" id="admin-pass" value="science"></span><button type="button" id="view_a" onclick='
+    document.getElementById("admin-pass").type="text"
+    document.getElementById("view_a").hidden = true
+    document.getElementById("hide_a").hidden = false
+    document.getElementById("admin-pass").style.backgroundColor = "red"
+    document.getElementById("admin-pass").style.Color = "white"
+    document.getElementById("admin-pass").placeholder = "The password is visible"
+    '>View Password</button><button type="button" id="hide_a" onclick='
+    document.getElementById("admin-pass").type="password"
+    document.getElementById("view_a").hidden = false 
+    document.getElementById("hide_a").hidden = true 
+    document.getElementById("admin-pass").style.backgroundColor = "white"
+    document.getElementById("admin-pass").style.Color = "black"
+    document.getElementById("admin-pass").placeholder = "Unlock Admin Options"
+    ' hidden>Hide Password</button>
       </div>
-      <button type="button" id="close-Admin Options" onclick="document.getElementById(&#39;unlock-admin-options&#39;).value=&#39;&#39;">Close Admin Options</button>
+      <button type="button" id="close-Admin Options" onclick="document.getElementById('unlock-admin-options').value=''">Close Admin Options</button>
       <div style="padding:3px;margin:3px;border-color:black;border-width:1px;border-style:solid;">
         <p id="desc">Hover over an option</p>
       </div>
@@ -85,7 +84,7 @@
   <tbody id="data">
 </tbody>
 </table>
-
+</div>
 <style>
 #canvas {
   flex: 0;
@@ -416,4 +415,4 @@ document.getElementById('close-Admin Options').addEventListener('click', () => {
   document.getElementById('open-Admin Options').disabled = true;
 })
 
-</script></body></html>
+</script>
