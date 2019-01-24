@@ -109,7 +109,7 @@ html {
   width: 28%;
   margin:1%;
   padding: 10px;
-  
+  background-color:#bbb;
   /*height: 300px;  Should be removed. Only for demonstration */
 }
 .shadow:hover {
@@ -125,6 +125,12 @@ html {
   content: "";
   display: table;
   clear: both;
+}
+a {
+	color:#018be0;
+}
+a:visited {
+	color:#018be0;
 }
 /*small desktops*/
 @media screen and (max-width: 1200px) {
