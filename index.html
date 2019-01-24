@@ -75,6 +75,14 @@
       domain: 'jackcrane.github.io'
   });
   woopra.track();
+ COUNT(
+  UNIQUE_PROPERTY(
+    VISIT_PROPERTY(ip),
+    IF(IS_ACTION_REGULAR()),
+    FROM(89,D),
+    TO(0,D)
+  )
+)
 </script>
 <!-- End of Woopra Code -->
 </body>
