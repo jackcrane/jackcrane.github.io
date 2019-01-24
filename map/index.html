@@ -1,0 +1,419 @@
+
+<!-- saved from url=(0038)http://www.7sigmarobotics.org/map.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div class="map-container">
+  <canvas id="canvas" width="752" height="570">
+  </canvas>
+  <div class="inputs">
+    <input type="number" id="longitude" placeholder="Longitude">
+    <input type="number" id="latitude" placeholder="Latitude">
+    <button type="submit" id="input-button">Add Hurricane</button>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button type="button" id="print_button" onclick="print()">Print Submit Form</button>
+    <button type="button" id="open-Admin Options" disabled="">Open Admin Options</button>
+    <input type="password" id="unlock-admin-options" placeholder="Unlock Admin Options" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"><button type="button" id="view" onclick="
+    document.getElementById(&quot;unlock-admin-options&quot;).type=&quot;text&quot;
+    document.getElementById(&quot;view&quot;).hidden = true
+    document.getElementById(&quot;hide&quot;).hidden = false
+    document.getElementById(&quot;unlock-admin-options&quot;).style.backgroundColor = &quot;red&quot;
+    document.getElementById(&quot;unlock-admin-options&quot;).style.Color = &quot;white&quot;
+    document.getElementById(&quot;unlock-admin-options&quot;).placeholder = &quot;The password is visible&quot;
+    ">View Password</button><button type="button" id="hide" onclick="
+    document.getElementById(&quot;unlock-admin-options&quot;).type=&quot;password&quot;
+    document.getElementById(&quot;view&quot;).hidden = false 
+    document.getElementById(&quot;hide&quot;).hidden = true 
+    document.getElementById(&quot;unlock-admin-options&quot;).style.backgroundColor = &quot;white&quot;
+    document.getElementById(&quot;unlock-admin-options&quot;).style.Color = &quot;black&quot;
+    document.getElementById(&quot;unlock-admin-options&quot;).placeholder = &quot;Unlock Admin Options&quot;
+    " hidden="">Hide Password</button>
+    <!-- <input type="button" 
+  onClick="window.print()" 
+  value="Print This Page"/> -->
+  </div>
+</div>
+<div class="control-panel" style="">
+   <div class="control-panel-body">
+      <h1 style="text-align: center;">Admin Control Panel  </h1>
+      <hr>
+      <h2 style="font-weight: normal">Do you want the system to calculate:</h2>
+      <hr>
+      <div class="control-panel-options">
+      <span onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Set all options to true or false&#39;">Select/deselect all<input data-variable="checkall" type="checkbox"></span>
+      </div>
+      <hr>
+      <div class="control-panel-options">
+        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of how far the hurricane has travelled.&#39;">Distance traveled<input data-variable="distapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of how fast the hurricane has been travelling.&#39;">Speed<input data-variable="speedapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of the direction the hurricane has been travelling. THIS FEATURE IS NOT PERFECT.&#39;">Direction<input data-variable="directapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the measurement of how far the hurricane is from the island of montserrat.&#39;">Distance to island<input data-variable="distislandapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Show the students the calculated time of landfall.&#39;">ETA<input data-variable="etaapprove" type="checkbox"></span>
+        <span onmouseleave="document.getElementById(&#39;desc&#39;).innerHMTL = &#39;Hover over an option&#39;" onmouseover="document.getElementById(&#39;desc&#39;).innerHTML = &#39;Change the admin password&#39;">Admin Password<input type="password" data-variable="admin-password" id="admin-pass" value="science" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"></span><button type="button" id="view_a" onclick="
+    document.getElementById(&quot;admin-pass&quot;).type=&quot;text&quot;
+    document.getElementById(&quot;view_a&quot;).hidden = true
+    document.getElementById(&quot;hide_a&quot;).hidden = false
+    document.getElementById(&quot;admin-pass&quot;).style.backgroundColor = &quot;red&quot;
+    document.getElementById(&quot;admin-pass&quot;).style.Color = &quot;white&quot;
+    document.getElementById(&quot;admin-pass&quot;).placeholder = &quot;The password is visible&quot;
+    ">View Password</button><button type="button" id="hide_a" onclick="
+    document.getElementById(&quot;admin-pass&quot;).type=&quot;password&quot;
+    document.getElementById(&quot;view_a&quot;).hidden = false 
+    document.getElementById(&quot;hide_a&quot;).hidden = true 
+    document.getElementById(&quot;admin-pass&quot;).style.backgroundColor = &quot;white&quot;
+    document.getElementById(&quot;admin-pass&quot;).style.Color = &quot;black&quot;
+    document.getElementById(&quot;admin-pass&quot;).placeholder = &quot;Unlock Admin Options&quot;
+    " hidden="">Hide Password</button>
+      </div>
+      <button type="button" id="close-Admin Options" onclick="document.getElementById(&#39;unlock-admin-options&#39;).value=&#39;&#39;">Close Admin Options</button>
+      <div style="padding:3px;margin:3px;border-color:black;border-width:1px;border-style:solid;">
+        <p id="desc">Hover over an option</p>
+      </div>
+   </div>
+</div>
+<table class="da-table minimalistBlack">
+  <thead>
+  <tr>
+    <th>ADV</th>
+    <th>Lat. N.</th>
+    <th>Lon. W.</th>
+    <th>Category</th>
+    <th>Distance Traveled</th>
+    <th>Speed</th>
+    <th>Direction</th>
+    <th>Distance to Island</th>
+    <th>ETA</th>
+  </tr>
+  </thead>
+  <tbody id="data">
+</tbody>
+</table>
+
+<style>
+#canvas {
+  flex: 0;
+  /*cursor: none;*/
+}
+.control-panel{
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+.control-panel-body{
+  width: 35%;
+  min-height: 52%;
+  margin-top: 13rem;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  background-color: white;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.control-panel-options input {
+  float: right;
+}
+.control-panel-options input[type="checkbox"] {
+  transform: scale(1.5);
+}
+.control-panel-options span:first-child {
+  margin-top: 1rem;
+} 
+.control-panel-options span {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.control-panel-body hr {
+  border-width: 1px;
+  border-style: solid;
+}
+.map-container > * {
+  flex: 1;
+}
+.inputs {
+  margin: 1em;
+}
+.map-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.da-table {
+  margin: 2em;
+}
+@media print {
+  #canvas {
+    display: none;
+  }
+  .inputs {
+    display: none;
+  }
+}
+table.minimalistBlack {
+  border: 3px solid #000000;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.minimalistBlack td, table.minimalistBlack th {
+  border: 1px solid #000000;
+  padding: 5px 4px;
+}
+table.minimalistBlack tbody td {
+  font-size: 13px;
+}
+table.minimalistBlack thead {
+  background: #CFCFCF;
+  background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  border-bottom: 3px solid #000000;
+}
+table.minimalistBlack thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+}
+table.minimalistBlack tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  border-top: 3px solid #000000;
+}
+table.minimalistBlack tfoot td {
+  font-size: 14px;
+}
+</style>
+
+<script>
+//   var admin = prompt("Do you have the admin passowrd? If so, enter it. If no, type no")
+// if (admin==="science") {
+// alert("Admin access GRANTED")
+// alert("we will begin to ask you if you want features activated. answer 'y' for yes and 'n' for no (lowercase)")
+let distapprove = false;
+let speedapprove = false;
+let directapprove = false;
+let distislandapprove = false;
+let etaapprove = false;
+let password = 'science';
+// }
+// if (admin==="no") {
+// alert("Ok thats fine, you will just continue as a student")}
+const CONV_RATE = 224;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext('2d');
+const MONSX = 103
+const MONSY = 213
+const longInput = document.getElementById("longitude");
+const latInput = document.getElementById("latitude");
+const inputButton = document.getElementById("input-button")
+const backgroundImage = new Image();
+backgroundImage.addEventListener('load', () => {
+  ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+}, false);
+backgroundImage.src = "http://www.7sigmarobotics.org/images/map.png";
+const table=document.getElementById("data")
+function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta){
+  const tr=document.createElement("tr");
+  tr.innerHTML = `
+  <tr>
+    <td>${adv}</td>
+    <td>${lat}</td>
+    <td>${long}</td>
+    <td>Insert Category</td>
+    <td>${distapprove  ? distance : ''}km</td>
+    <td>${speedapprove ? speed : ''}km/h</td>
+    <td>${directapprove ? direction : ''}</td>
+    <td>${distislandapprove ? distance2 : ''}km</td>
+    <td>${etaapprove ? eta : ''}</td>
+  </tr>
+  `;
+  // <tr>
+  //   <td>${adv}</td>
+  //   <td>${lat}</td>
+  //   <td>${long}</td>
+  //   <td>Insert Category</td>
+  //   <td>${distance}km</td>
+  //   <td>${speed}km/h</td>
+  //   <td>${direction}</td>
+  //   <td>${distance2}km</td>
+  //   <td>${eta}</td>
+  // </tr>
+  table.appendChild(tr)
+}
+window.addRow = addRow;
+function drawHurricane(x, y){
+  ctx.beginPath();
+  const radius = milesToPixels(140);
+    ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+    ctx.fillStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#000';
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, 2, 0, Math.PI * 2, false);
+    ctx.fill();
+}
+function coordinatesToPixels(lat, long){
+  const latPixels = (63 - lat) * (683/19) + 73;
+  const longPixels = (22 - long) * (500/14) + 28;
+  return {x: latPixels, y: longPixels};
+}
+function drawHurricaneForCoords(lat, long){
+  const xAndY = coordinatesToPixels(lat, long);
+  console.log(xAndY);
+  drawHurricane(xAndY.x, xAndY.y);
+}
+function milesToPixels(miles) {
+  const pixels = miles * (CONV_RATE/400);
+  return pixels;
+}
+function pixelsToMiles(pixels) {
+  const miles = pixels * (400/CONV_RATE);
+  return miles;
+}
+function calcDistance(x1, y1, x2, y2) {
+  const distanceX = x2 - x1;
+  const distanceY = y2 - y1;
+  const distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
+  return Math.floor(pixelsToMiles(distance));
+}
+function getDirection(x1, y1, x2, y2) {
+  const distanceX = x2 - x1;
+  const distanceY = y2 - y1;
+  const eOrW = distanceX > 0 ? 'West' : 'East';
+  const nOrS = distanceY > 0 ? 'North' : 'South'; 
+  return `${nOrS} ${eOrW}`
+}
+function drawHurricaneLine(x1, y1, x2, y2, drawHurricane = true, drawText = false) {
+  const distanceBetween = calcDistance(x1, y1, x2, y2);
+  if (drawHurricane) {
+    ctx.beginPath();
+    ctx.strokeStyle = '#ff0000';
+    ctx.lineWidth = 1;
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);   
+  } 
+  if (drawText) {
+    ctx.font = "30px Arial";
+    ctx.fillText(distanceBetween, (x1+x2)/2, (y1+y2)/2);
+  }
+  ctx.stroke();
+}
+objects = [];
+function drawObjects (){
+  let lastHurricaneX;
+  let lastHurricaneY;
+  const thingsToDraw = objects.slice(0).reverse();
+  let drewText = false;
+  thingsToDraw.forEach((object) => {
+    if (object.type === 'hurricane') {
+      drawHurricane(object.x, object.y);
+      if (lastHurricaneX && lastHurricaneY) {
+        drawHurricaneLine(object.x, object.y, lastHurricaneX, lastHurricaneY, true, false);
+        drewText = true;
+      }
+      lastHurricaneX = object.x;
+      lastHurricaneY = object.y;
+    }
+  })
+  const hurricane = thingsToDraw.find((object) => object.type == 'hurricane');
+  if (hurricane) {
+    drawHurricaneLine(hurricane.x, hurricane.y, MONSX, MONSY, false);   
+  }
+} 
+function getLastHurricane(){
+  return objects.reverse().find((object) => object.type == 'hurricane')
+}
+let oldX = 0;
+let oldY = 0;
+const boxes = document.querySelectorAll('.control-panel-options input')
+boxes.forEach((box) => {
+  box.addEventListener('change', (e) => {
+    console.log(e);
+    if (e.target.dataset.variable === 'distapprove') {
+      distapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'speedapprove') {
+      speedapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'directapprove') {
+      directapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'distislandapprove') {
+      distislandapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'etaapprove') {
+      etaapprove = e.target.checked;
+    } else if (e.target.dataset.variable === 'admin-password') {
+      password = e.target.value;      
+    } else if (e.target.dataset.variable === 'checkall') {
+      const changedTo = e.target.checked;
+      distapprove = changedTo;
+      speedapprove = changedTo;
+      directapprove = changedTo;
+      distislandapprove = changedTo;
+      etaapprove = changedTo;
+      boxes.forEach((box) => {
+        box.checked = changedTo;
+      })
+    } else {
+      console.log('we couldn\'t match the checkbox');
+    }
+  })
+})
+canvas.addEventListener('mousemove', (e) => {
+  // ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+  //drawHurricane(e.x, e.y);
+  // drawObjects();
+})
+canvas.addEventListener('click', (e) => {
+  //objects.push({ x: e.x, y: e.y, type: 'hurricane'});
+  //console.log(e.x, e.y)
+})
+let advance = 0;
+inputButton.addEventListener("click", () => {
+  console.log('IVE BEEN CLICKED');
+  const long = parseFloat(latInput.value, 10);
+  const lat = parseFloat(longInput.value, 10);
+  if (long < 8 || long > 22) {
+    alert('invalid');
+    return;
+  } 
+  if (lat < 45 || lat > 64) {
+    alert('invalid');
+    return;
+  } 
+  latInput.value = null;
+  longInput.value = null;
+  
+  const { x, y } = coordinatesToPixels(lat, long);
+  // function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta)
+  const distance2 = calcDistance(x, y, MONSX, MONSY);
+  const hurricane = getLastHurricane();
+  let distance = 0;
+  let direction = 'n/a';
+  let eta = 'n/a'
+  if (hurricane) {
+    direction = getDirection(x, y, hurricane.x, hurricane.y);
+    distance = calcDistance(x, y, hurricane.x, hurricane.y);
+    eta = Math.floor((distance2/distance) * 100)/100;
+    eta = eta + "hours";
+  }
+  addRow(advance, lat, long, 'doesn\'t matter', distance, distance, direction, distance2, eta);
+  advance += 1;
+  objects.push({ x: x, y: y, type: 'hurricane'});
+  drawObjects();
+})
+document.getElementById('unlock-admin-options').addEventListener('change', (e) => {
+  document.getElementById('open-Admin Options').disabled = e.target.value !== password;
+});
+document.getElementById('open-Admin Options').addEventListener('click', () => {
+  document.querySelector('.control-panel').style.display = 'block';
+})
+document.getElementById('close-Admin Options').addEventListener('click', () => {
+  document.querySelector('.control-panel').style.display = 'none';
+  document.getElementById('open-Admin Options').disabled = true;
+})
+
+</script></body></html>
