@@ -326,7 +326,7 @@ function drawObjects (){
   }
 } 
 function getLastHurricane(){
-  return objects.reverse().find((object) => object.type == 'hurricane')
+  return objects.slice(0).reverse().find((object) => object.type == 'hurricane')
 }
 let oldX = 0;
 let oldY = 0;
