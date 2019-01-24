@@ -215,7 +215,7 @@ const backgroundImage = new Image();
 backgroundImage.addEventListener('load', () => {
   ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 }, false);
-backgroundImage.src = "http://www.7sigmarobotics.org/images/map.png";
+backgroundImage.src = "map.png";
 const table=document.getElementById("data")
 function addRow(adv, lat, long, cat, distance, speed, direction, distance2, eta){
   const tr=document.createElement("tr");
