@@ -24,8 +24,7 @@ const DNA_MAP = {
 	w: "<img src='red.png'><img src='yellow.png'><img src='yellow.png'><br>",
 	x: "<img src='yellow.png'><img src='red.png'><img src='white.png'><br>",
 	y: "<img src='red.png'><img src='white.png'><img src='purple.png'><br>",
-	z: "<img src='red.png'><img src='white.png'><img src='red.png'><br>",
-	_: "<br><br><br>"
+	z: "<img src='red.png'><img src='white.png'><img src='red.png'><br>"
 }
 
 function letterToDna(letter){
@@ -37,6 +36,7 @@ function letterToDna(letter){
 function trans() {
 	document.getElementById("container").innerHTML = ""
 	var msg = document.getElementById("msg").value
+	hasWhiteSpace(msg)
 	var length = msg.length
 		if(msg.charAt(0)!="") {
 			letterToDna(msg.charAt(0))
@@ -159,6 +159,12 @@ function trans() {
 			letterToDna(msg.charAt(13))
 		} else {}
 		if(msg.length>=40) {
-			alert("ERROR: only 40 characters are supported.")
+			errorMsg("ERROR: only 40 characters are supported.")
 		} else {}
+}
+function errorMsg(msg) {
+	document.getElementById(errorBox).innerHTML = msg
+}
+function hasWhiteSpace(s) {
+  return s.indexOf(' ') >= 0;
 }
