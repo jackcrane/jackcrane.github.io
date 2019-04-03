@@ -15,6 +15,7 @@
 	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	display:none;
 }
 html, body { /*we do not use the . before the class name because we are styling tags, not classes. Usually a bad practice, but excusable for the HTML and Body tags.*/
 	padding: 0;
@@ -56,6 +57,6 @@ body {
 		display:inline-block;
 	}
 	.subtitle {
-		
+		display:block;
 	}
 }
