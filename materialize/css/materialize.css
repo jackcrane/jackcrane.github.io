@@ -5196,10 +5196,10 @@ small {
 .btn-small[disabled],
 .btn-flat[disabled] {
   pointer-events: none;
-  background-color: #ff7800 !important;
+  background-color: var(--disabled-bg-color) !important;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #9F9F9F !important;
+  color: var(--disabled-color) !important;
   cursor: default;
 }
 
@@ -5222,8 +5222,8 @@ small {
 .btn-large[disabled]:hover,
 .btn-small[disabled]:hover,
 .btn-flat[disabled]:hover {
-  background-color: #ff7800 !important;
-  color: #9F9F9F !important;
+  background-color: var(--disabled-bg-color);
+  color: var(--disabled-color);
 }
 
 .btn, .btn-large, .btn-small,
@@ -5246,13 +5246,13 @@ small {
 
 .btn:focus, .btn-large:focus, .btn-small:focus,
 .btn-floating:focus {
-  background-color: #ff7800;
+  background-color: var(--disabled-bg-color);
 }
 
 .btn, .btn-large, .btn-small {
   text-decoration: none;
-  color: #fff;
-  background-color: orange;
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: background-color .2s ease-out;
@@ -5261,7 +5261,7 @@ small {
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
-  background-color: darkorange;
+  background-color: var(--btn-bg-hover);
 }
 
 .btn-floating {
@@ -7600,11 +7600,11 @@ input[type=range]::-ms-thumb {
 }
 
 .sidenav li > a.btn:hover, .sidenav li > a.btn-large:hover, .sidenav li > a.btn-small:hover, .sidenav li > a.btn-large:hover {
-  background-color: darkorange;
+  background-color: var(--btn-bg-hover);
 }
 
 .sidenav li > a.btn-floating:hover {
-  background-color: orange;
+  background-color: var(--btn-color);
 }
 
 .sidenav li > a > i,

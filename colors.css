@@ -1,0 +1,103 @@
+/*Note to dev: 
+.class {
+	--disabled-bg-color:Lightened color for when the button is disabled;
+	--disabled-color:color for when the button is disabled;
+	--btn-color:Non-disabled font color;
+	--btn-bg-hover:Darkened color for when the button is hovered;
+	--btn-bg:theme color;
+}
+
+*/
+
+
+.btn-orange {
+	--disabled-bg-color:#ff7800;
+	--disabled-color:#9F9F9F;
+	--btn-color:#fff;
+	--btn-bg-hover:darkorange;
+	--btn-bg:orange;
+}
+.btn-blue {
+	--disabled-bg-color:#4daaff;
+	--disabled-color:#9F9F9F;
+	--btn-color:#fff;
+	--btn-bg-hover:#006bcc;
+	--btn-bg:#0086ff;
+}
+.btn-pink {
+	--disabled-bg-color:#ff4daa;
+	--disabled-color:#9F9F9F;
+	--btn-color:#fff;
+	--btn-bg-hover:#cc006b;
+	--btn-bg:#ff0086;
+}
+.btn-mint { 
+    --disabled-bg-color:#4dffa1;
+    --disabled-color:black;
+    --btn-color:white;
+    --disabled-color:#00cc61;
+    --disabled-bg-color:#00ff79;
+}
+.btn-red { 
+    --disabled-bg-color:#ff4d51;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#cc0005;
+    --disabled-bg-color:#ff0006;
+}
+.btn-yellow { 
+    --disabled-bg-color:#fffb4d;
+    --disabled-color:black;
+    --btn-color:black;
+    --disabled-color:#ccc700;
+    --disabled-bg-color:#fff900;
+}
+.btn-purple { 
+    --disabled-bg-color:#fb4dff;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#c700cc;
+    --disabled-bg-color:#f900ff;
+}
+.btn-darkgreen { 
+    --disabled-bg-color:#00ff79;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#00803d;
+    --disabled-bg-color:#00b355;
+}
+.btn-brown { 
+    --disabled-bg-color:#ce661c;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#5e2f0d;
+    --disabled-bg-color:#8b4513;
+}
+.btn-gold { 
+    --disabled-bg-color:#cebf1c;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#5e570d;
+    --disabled-bg-color:#8b8113;
+}
+.btn-darkred { 
+    --disabled-bg-color:#c80000;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#480000;
+    --disabled-bg-color:#7b0000;
+}
+.btn-darkblue { 
+    --disabled-bg-color:#0000c8;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#000048;
+    --disabled-bg-color:#00007b;
+}
+.btn-royalblue { 
+    --disabled-bg-color:#1616ff;
+    --disabled-color:white;
+    --btn-color:white;
+    --disabled-color:#000095;
+    --disabled-bg-color:#0000c8;
+}
