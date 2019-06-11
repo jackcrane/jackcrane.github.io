@@ -7,7 +7,7 @@ use SendGrid\Mail\From;
 use SendGrid\Mail\Mail;
 use SendGrid\Mail\To;
 
-$sendgrid = new SendGrid("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");
+$sendgrid = new SendGrid("{api key}");
 $email    = new SendGrid\Mail\Mail();
 
 $email->addTo("3jbc22@gmail.com")
