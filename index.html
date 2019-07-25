@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link href="style.css" rel="stylesheet">
-	<!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <script type="text/javascript" src="jquery.js"></script>
-      <script type="text/javascript" src="materialize/js/materialize.js"></script>
-      <title>Jack Crane</title>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139549936-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+	<title>Jack Crane</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<link href="newStyle.css" rel="stylesheet">
+	<script src="TemplateData/UnityProgress.js"></script>
+	<script src="Build/UnityLoader.js"></script>
+	<script src="newScript.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/0.3.json", {onProgress: UnityProgress});
 
-        gtag('config', 'UA-139549936-1');
-      </script>
-
+    </script>
 </head>
 <body>
-<div class="header-container">
-	<img src="https://png.pngtree.com/thumb_back/fh260/back_pic/03/62/30/9157aa94e693d90.jpg" width="100%">
-	<div class="title">Jack Crane</div>
-	<div class="subtitle">High schooler, independent HTML web dev</div>
-</div>
-<div class="padded_container">
-	<div class="padded_sys col s12 m2 z-depth-4 ">
-  		<a class="waves-effect waves-light btn-large" style="width:98%;margin:1%" href="#">Photo System</a>
-  		<h3>Photo System</h3>
-  		<p>A complete system to alleviate stress on our phones</p>
-  		<p>Goals of this site:</p>
-  			<li>Run on LAN and create a repository for all of our images</li>
-  	</div>
-  	<div class="padded_sys col s12 m2 z-depth-4">
-  		<a class="waves-effect waves-light btn-large" style="width:98%;margin:1%" href="https://chrome.google.com/webstore/detail/pc-pin-inserter/kfbaafjlknkmeoihikbnifkdonljeamn">PC Pin Inserter</a>
-  		<h3>PC PIN Inserter</h3>
-  		<p>A simple chrome extension that automatically logs into the PCL wifi every time we get booted</p>
-  		<p>Goals:</p>
-  			<li>Maintain our sanity by not having to log in every 30 seconds</li>
-  	</div>
-  	<div class="padded_sys col s12 m2 z-depth-4">
-  		<a class="waves-effect waves-light btn-large" style="width:98%;margin:1%" href="dna/">DNA</a>
-  		<h3>DNA</h3>
-  		<p>A simple, nonstyled site made to computerize the translation of DNA to mRNA to the color codes.</p>
-  		<p>Goals of this site:</p>
-  			<li>Use simple javascript to replace letters with colors</li>
-  	</div>
-  	<div class="padded_sys col s12 m2 z-depth-4">
-  		<a class="waves-effect waves-light btn-large" style="width:98%;margin:1%" href="https://chrome.google.com/webstore/detail/myschoolapp-gpa-calculato/jfbodkjgjenlagkjepebmpnhekihgplo">GPA Calc</a>
-  		<h3>GPA Calc</h3>
-  		<p>A javascript plugin to myschoolapp to calculate GPA</p>
-  		<p>Goals of this Chrome Extension:</p>
-  			<li>Calculate GPA</li>
-  			<li>Distribute to classmates</li>
-  	</div>
-</div>
-<div class="footer">
-	JACK CRANE <br>
-	Experience in: HTML, PHP, Javascript
-</div>
-
-<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-<script type="text/javascript" src="init.js"></script>
+	<div class="masterContainer">
+		<div class="gl backg">
+			<div id="unityContainer" style="width: 100%; height: 100%"></div>
+			<!-- Unity-powered webGL Plugin, interacting with browser JS -->
+		</div>
+		<div class="section">
+			<div class="sect wave" onmouseover="sendWave()">
+				<div class="subsect">
+					<h1>Hi, Im Jack.</h1>
+					<p>I am a web developer with a few extra skills.<br><br>
+					I am in High School and am competing on FTC Team 14365<br><br>
+					I go to the Summit Country Day school in Cincinnati, Ohio
+					</p>
+					<br><br><br><br><br><br><br><br>
+					<p>Scroll Down</p>
+				</div>
+			</div>
+			<div class="subsect"><hr></div>
+			<div class="sect walk" onmouseover="sendWalk()">
+				<div class="subsect">
+					<h1>I started with HTML</h1>
+					<a href="http://fan5fll.github.io">My first website</a><br><br>
+					<sp>I made this website when I was 11 years old</sp><br><br><br>
+					<h2>Then shifted my focus to Javascript...</h2>
+					<a href="http://jackcrane.github.io/map">My first webapp</a><br><br>
+					<sp>Simple, non-stylized web application for school</sp><br><br><br>
+					<h2 style="font-size:1.7rem">Then php...</h2>
+					<h2 style="font-size:1.5rem">Then python...</h2>
+					<h2 style="font-size:1.3rem">Then java...</h2>
+					<h2 style="font-size:1rem">Then c#...</h2>
+					<h2 style="font-size:0.7rem">Then mysql...</h2>
+					<h2 style="font-size:0.5rem">Then C++...</h2>
+				</div>
+			</div>
+			<div class="subsect"><hr></div>
+			<div class="sect run" onmouseover="sendRun()">
+				<div class="subsect">
+					<h1>How does this page work?</h1>
+					<sp>If on mobile, skip this section, or go to a computer to experience this website to its fullest.</sp>
+					<p>I am using <a href="https://unity3d.com">Unity 3d</a> to power the background, using a <a href="https://docs.unity3d.com/Manual/webgl-building.html">webGL build</a>.</p>
+					<p>I then am using Javascript to <a href="https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html">send information to Unity C#</a>, which then updates the animation</p>
+					<p>Powered by Javascript, C#, and Unity 3d</p>
+					<br>
+					<p>Special thanks to <a href="https://www.thingiverse.com/duck_toy">duck_toy</a> for the <a href="https://www.thingiverse.com/thing:2863108">low poly person model</a>, and Adobe-powered <a href="https://www.mixamo.com/">Mixamo</a> for the animations</p>
+					<br>
+				</div>
+			</div>
+			<div class="subsect"><hr></div>
+			<div class="sect backflip" onmouseover="sendBackflip()">
+				<div class="subsect">
+					<h1>Like what you see? Lets get in contact!</h1>
+					<br>
+					<p>Head over to my current GitHub <a href="https://github.com/jackcrane">@jackcrane</a>, or my older GitHub <a href="https://github.com/fan5fll">@fan5fll</a></p><br>
+					<p>Add me on Discord  <code>fantastic1#0597</code></p><br>
+					<p>Or just shoot me an email at <a href="mailto:3jbc22@gmail.com">3jbc22@gmail.com</a></p>
+					<br>
+					<p>And if you really dont want to do any of those, fill out this contact form:</p>
+					<form action="formspree.io/3jbc22@gmail.com" method="POST">
+						<input required type="email" name="replyTo" placeholder="Email (what I will reply to)"><br>
+						<textarea required name="reqs" placeholder="What are the specifics of what you want me to do for you?"></textarea><br>
+						<input type="submit" value="submit">
+					</form>
+				</div>				
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>
