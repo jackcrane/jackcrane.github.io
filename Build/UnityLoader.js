@@ -1,4 +1,4 @@
-function bogusbogusAlert(a) {
+function bogusAlert(a) {
 	// Gets rid of that pesky bogusAlert?
 	console.log('alert hidden')
 }
