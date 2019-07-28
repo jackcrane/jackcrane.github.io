@@ -1,3 +1,7 @@
+function bogusbogusAlert(a) {
+	// Gets rid of that pesky bogusAlert?
+}
+
 var UnityLoader = UnityLoader || {
 	Compression: {
 		identity: {
@@ -1785,7 +1789,7 @@ var UnityLoader = UnityLoader || {
 			var r = t ? this.demangle(e, t) : e.message;
 			if (!(t && t.errorhandler && t.errorhandler(r, e.filename, e.lineno) || (console.log("Invoking error handler due to\n" + r), "function" == typeof dump && dump("Invoking error handler due to\n" + r), r.indexOf("UnknownError") != -1 || r.indexOf("Program terminated with exit(0)") != -1 || this.didShowErrorMessage))) {
 				var r = "An error occurred running the Unity content on this page. See your browser JavaScript console for more info. The error was:\n" + r;
-				r.indexOf("DISABLE_EXCEPTION_CATCHING") != -1 ? r = "An exception has occurred, but exception handling has been disabled in this build. If you are the developer of this content, enable exceptions in your project WebGL player settings to be able to catch the exception or see the stack trace." : r.indexOf("Cannot enlarge memory arrays") != -1 ? r = "Out of memory. If you are the developer of this content, try allocating more memory to your WebGL build in the WebGL player settings." : r.indexOf("Invalid array buffer length") == -1 && r.indexOf("Invalid typed array length") == -1 && r.indexOf("out of memory") == -1 && r.indexOf("could not allocate memory") == -1 || (r = "The browser could not allocate enough memory for the WebGL content. If you are the developer of this content, try allocating less memory to your WebGL build in the WebGL player settings."), alert(r), this.didShowErrorMessage = !0
+				r.indexOf("DISABLE_EXCEPTION_CATCHING") != -1 ? r = "An exception has occurred, but exception handling has been disabled in this build. If you are the developer of this content, enable exceptions in your project WebGL player settings to be able to catch the exception or see the stack trace." : r.indexOf("Cannot enlarge memory arrays") != -1 ? r = "Out of memory. If you are the developer of this content, try allocating more memory to your WebGL build in the WebGL player settings." : r.indexOf("Invalid array buffer length") == -1 && r.indexOf("Invalid typed array length") == -1 && r.indexOf("out of memory") == -1 && r.indexOf("could not allocate memory") == -1 || (r = "The browser could not allocate enough memory for the WebGL content. If you are the developer of this content, try allocating less memory to your WebGL build in the WebGL player settings."), bogusAlert(r), this.didShowErrorMessage = !0
 			}
 		},
 		popup: function (e, t, r) {
@@ -2231,7 +2235,7 @@ var UnityLoader = UnityLoader || {
 			return n.compatibilityCheck(n, function () {
 				var t = new XMLHttpRequest;
 				t.open("GET", n.url, !0), t.responseType = "text", t.onerror = function () {
-					o.print("Could not download " + n.url), 0 == document.URL.indexOf("file:") && alert("It seems your browser does not support running Unity WebGL content from file:// urls. Please upload it to an http server, or try a different browser.")
+					o.print("Could not download " + n.url), 0 == document.URL.indexOf("file:") && bogusAlert("It seems your browser does not support running Unity WebGL content from file:// urls. Please upload it to an http server, or try a different browser.")
 				}, t.onload = function () {
 					var a = JSON.parse(t.responseText);
 					for (var s in a) "undefined" == typeof o[s] && (o[s] = a[s]);
