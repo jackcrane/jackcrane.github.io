@@ -1,5 +1,6 @@
 function bogusbogusAlert(a) {
 	// Gets rid of that pesky bogusAlert?
+	console.log('alert hidden')
 }
 
 var UnityLoader = UnityLoader || {
