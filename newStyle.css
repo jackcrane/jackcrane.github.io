@@ -4,6 +4,9 @@
   color:white;
   font-family: 'Roboto', sans-serif;
 }
+.logo,.Dark {
+  display:none;
+}
 .backg,
 .section {
   width: 100%;
