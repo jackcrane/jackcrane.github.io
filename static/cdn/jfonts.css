@@ -24,6 +24,11 @@
 }
 
 @font-face {
+	font-family:"SpaceAge";
+	src:url("https://jackcrane.github.io/static/cdn/fonts/spaceAge.otf");
+}
+
+@font-face {
 	font-family:"Product Sans";
 	src:url("https://jackcrane.github.io/static/cdn/fonts/productSans.ttf");
 }
