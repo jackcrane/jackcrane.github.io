@@ -335,7 +335,7 @@ function ScrollingBackGround(x,y,width,height, useWidth, useHeight,image){
                     {
                     newY = -this.y;
                 }
- ctx.drawImage(image,0,0,this.width,this.height,1200+this.x,newY,this.useWidth,this.useHeight);
+ ctx.drawImage(image,this.x,this.y,this.width,this.height,1200+this.x,newY,this.useWidth,this.useHeight);
                 console.log("x=" + this.x+ ", this.y = " + this.y);
             }
             ctx.globalAlpha = 1.0;
