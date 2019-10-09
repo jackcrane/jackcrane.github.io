@@ -1,0 +1,29 @@
+.titleText {
+	font-family:Hacked;
+	font-size:8rem;
+	position: absolute;
+	top: 36%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:80%;
+	text-align:center;
+	mix-blend-mode: difference;
+  	color: white;
+}
+
+.titleContainer {
+	position: relative;
+	overflow:none;
+	height:100vh;
+}
+
+.titleContainer img {
+    transform: translate(-23%, 0%);
+	min-height:100%;
+	min-width:100%;
+}
+
+body {
+	margin:0;
+	background-color:#1f1f1f;
+}
