@@ -32,3 +32,13 @@
 	font-family:"Product Sans";
 	src:url("https://jackcrane.github.io/static/cdn/fonts/productSans.ttf");
 }
+
+@font-face {
+	font-family:"Hacked";
+	src:url("https://jackcrane.github.io/static/cdn/fonts/hacked.ttf");
+}
+
+@font-face {
+	font-family:"Library";
+	src:url("https://jackcrane.github.io/static/cdn/fonts/library.otf");
+}
