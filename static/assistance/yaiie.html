@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name = "viewport" content = "width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home Page</title>
+      <style> 
+         /*Solid Background*/
+         body {
+           background-image: url("https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+         }
+         /*Center Box*/
+         .box {
+           background-color: white;
+           overflow:auto;
+           margin-top: 10%;
+           width: 80%;
+           margin-left: auto;
+           margin-right: auto;
+           border: 10px solid black;
+         }      
+         .video {
+           float:left;
+           width:40%;
+           padding:5%;
+           margin:0;
+         }
+         .video iframe {
+           border:5px solid black;
+           width:100%;
+           height:23vh;
+         }
+         @media only screen and (max-width: 950px) {
+           .video {
+             float:none!important;
+             width:88%;
+           }
+         }
+      </style>
+   </head>
+   <body>
+      <div>
+      <div class="box">
+         <div class="video">
+            <iframe src = "https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+            <!-- original video: https://youtu.be/HF-hw34wmDA -->
+         </div>
+         <div class ="video">
+            <iframe src = "https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+            <!-- Original video: https://youtu.be/_nK5IRmVLrU -->
+         </div>
+      </div>
+   </body>
+</html>
