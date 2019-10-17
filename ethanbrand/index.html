@@ -13,8 +13,94 @@
 	<div class="bodyContainerWhite">
 		<h1 class="library">The Ethan Brand Animation</h1>
 		<div class="content">
-			<p>Ethan Brand is a short story written by Nathanial Hawthorne in 1850.</p>
+			<p>
+				<h2 class="libraryH2">The story</h2>
+
+				Ethan brand is a short story written by nathaniel hawthorne in 1850. The main character of Ethan Brand is named Bartram, and is a "lime burner", or someone who smelts limestone into lime. He is visited by his predecessor, the title character Ethan Brand, who is a man with ambiguous morals and who has gone on a long journey to commit the "Unpardonable Sin". Read the entire story <a href="text.html">here</a>
+
+				<h2 class="libraryH2">The project</h2>
+
+				The idea of this animation is to imitate a stunningly high-quality animation with photorealistic and physically based rendered characters and environments. We have set out with Unity's Adam demo reels as a target, and hope to see how far a one-man-army team with a limited budget can achieve
+
+				<h2 class="libraryH2">The ToDo's</h2>
+
+				The character pictured above is a low-resolution, very generic character. My next step is to bring the characters into Substance Painter and touch them up, adding higher resolution maps, and more interesting features to the bodies (scars, freckles, etc)
+				<br><br>
+				The environment is also in existence, but I am waiting for 2 things to continue it's development: a stronger computer (I am using a laptop with onboard graphics), and a Quixel Indie partnership for high-quality models and textures
+
+				<h2 class="libraryH2">The pipelines</h2>
+
+				<button type="button" class="collapsible">Character creation</button>
+				<div class="content-coll drop">
+					<p>Ethan Brand's character creation process is largely consistent, but for sake of completeness, there is a plan/journal of every character's process.</p>
+					
+					<button type="button" class="collapsible">Ethan Brand</button>
+					<div class="content-coll drop">
+						<p>Ethan Brand is the character able to be seen at the top of this page. I started work on Ethan in Adobe Fuse (just to get a base layer), then transitioned to Substance Painter. Using SP, I am adding higher quality skin textures, scars, facial hair, and imperfections. After SP, I will bring the characters into Mixamo to get some basic animations (walking, sitting, standing, idle), and Blender to perfect the Mixamo animations and add facial motion capture data (recorded in Blender)<br><br>The most distinctive feature of Ethan is the scar along his chin. This scar helps to define Ethan as a outlander and a man who has spent the last 10 years of his life searching for sin.</p>
+					</div>
+					
+					<button type="button" class="collapsible">Bartram</button>
+					<div class="content-coll drop">
+						<p>The mission of Bartram was to make a more down-to-earth version of Ethan. I used the same pipeline as Ethan for Bartram, but with less work in Substance Painter.</p>
+					</div>
+					
+					<button type="button" class="collapsible">Joe</button>
+					<div class="content-coll drop">
+						<p>I haven't started Joe yet, but I plan to get a base kid model from the internet, and heavily modify it in Substance Painter. The reason behind this is Adobe fuse's base models are all adults, and Joe is a child. After Substance Painter, the Mixamo/blender pipeline will continue from Ethan Brand.</p>
+					</div>
+					
+				</div>
+
+				<button type="button" class="collapsible">Environment creation</button>
+				<div class="content-coll drop">
+					<p>As of the most current plans, There will be 2 environments: the photorealistic, high resolution, high poly lime kiln environment, and a low-poly but huge town scene, situated in a valley upon which lies the lime kiln environment.</p>
+					
+					<button type="button" class="collapsible">Lime kiln environment</button>
+					<div class="content-coll drop">
+						<p>The lime kiln environment was a challenge as it had to be perfect so it wouldn't draw away from the overall quality. This will be acheived through a simple model of the lime kiln, with high quality textures and shaders to supplement the quality of the model. For rocks, plants, logs, and everything else in the scene, I hope to use Quixel Megascans.</p>
+						
+							<button type="button" class="collapsible">Creating the kiln</button>
+						<div class="content-coll drop">
+							<p>Used Rhino 6, and spent as little time as possible on this kiln. I plan to use a different model (possibly a photoscan) as I get closer to production, so the model I currently have is just a "placeholder"</p>
+						</div>
+						
+						<button type="button" class="collapsible">Laying out the environment</button>
+					<div class="content-coll drop">
+						<p>Using (hopefully) a large number of assets from Quixel's Megascans library (currently using Megascan's free assets), I will create a high quality scene, using several models, ported to Unity through Quixel Bridge, turning and slightly scaling them to not look repedative</p>
+					</div>
+						
+						<button type="button" class="collapsible">Lighting</button>
+					<div class="content-coll drop">
+						<p>I decided early on that due to the nature of the story, a lot could be gained from using a dramatic environment. I then settled on volumetric lighting as a crucial aspect to the mood of the animation, both in the nighttime set of the lime kiln, and the dawn time when the villaige will be seen, I decided volumetric lights could play two very different, yet crucial roles in the setting.</p>
+					</div>
+						
+					</div>
+
+					<button type="button" class="collapsible">Huge town environment</button>
+						<div class="content-coll drop">
+							<p>The huge town environment will be used for a minute (at most) in the very end of the shot. The original text states that the kiln is on a hill, so I plan to put the kiln on a mountain, and at the final shot (credits, cinematic music), the camera will start at the kiln scene, then pan back and up revealing the whole town spread out below, just waking up, with a morning sky texture and volumetric lighting. <br><br>I plan to just use cubes for this environment, as it is not neccessary to have high quality models and textures as it will be viewed from so far away, and from only one angle. The largest anticipated issue for this scene will be dealing with the technology of occlusion. Without it, the scene will not move as smoothly, and will require more powerful devices to run the animation realitme.</p>
+						</div>
+					
+				</div>
+
+			</p>
 		</div>
 	</div>
 </body>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 100 + "vh";
+    }
+  });
+}
+</script>
 </html>
