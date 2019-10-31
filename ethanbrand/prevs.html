@@ -31,8 +31,8 @@ var temp = 100;
 var fullSrc;
 cont = true
 while(cont == true) {
-	if(imageExists("EB_demo_00" + temp)) {
-		imgSrc = "EB_demo_00" + temp
+	if(imageExists("EB_demo00" + temp + ".mp4")) {
+		imgSrc = "EB_demo00" + temp + ".mp4"
 		
     } else {}
 	if(temp==0) {
@@ -41,5 +41,7 @@ while(cont == true) {
 	temp = temp-1
 	console.log("tried " + temp)
 }
+
+document.getElementById("MRvideo").src = "assets/videos/" + fullSrc + ".mp4"
 	</script>
 </html>
