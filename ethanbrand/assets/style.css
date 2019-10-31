@@ -83,6 +83,10 @@ body {
 	font-size:15px;
 }
 
+p {
+	font-size:25px;
+}
+
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
 	--main-color: #1f1f1f;
@@ -95,7 +99,7 @@ body {
 	border: none;
 	text-align: left;
 	outline: none;
-	font-size: 15px;
+	font-size: 25px;
 	transition:.3s;
 	margin:.5%;
 	margin-bottom:0;
