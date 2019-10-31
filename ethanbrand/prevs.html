@@ -29,7 +29,7 @@ function imageExists(image_url){
 }
 
 var temp = 100;
-var fullSrc;
+var imgSrc;
 cont = true
 while(cont == true) {
 	if(imageExists("assets/videos/EB_demo00" + temp + ".mp4")) {
@@ -42,7 +42,8 @@ while(cont == true) {
 	temp = temp-1
 	console.log("tried " + temp)
 }
+console.log(imgSrc)
 
-document.getElementById("MRvideo").src = "assets/videos/" + fullSrc + ".mp4"
+document.getElementById("MRvideo").src = "assets/videos/" + imgSrc + ".mp4"
 	</script>
 </html>
