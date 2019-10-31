@@ -14,6 +14,7 @@
 	<div class="text">
 		<h2 class="libraryH2">Most recent recording</h2>
 		<video id="MRvideo" width="100%" controls autoplay autobuffer></video>
+		<p>This is the most recent version of this video (v <span id="fillMe"></span>). View the full history of our videos over on <a href="https://github.com/jackcrane/jackcrane.github.io/tree/master/ethanbrand/assets/videos">GitHub</a></p>
 	</div>
 	</body>
 	<script>
@@ -46,6 +47,7 @@ console.clear()
 console.log("Most recent file found: "+imgSrc+"!")
 
 document.getElementById("MRvideo").src = "assets/videos/" + imgSrc
+document.getElementById("fillMe").innerHTML = temp
 document.getElementById("clearOnLoad").hidden = true
 	</script>
 </html>
