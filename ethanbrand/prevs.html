@@ -4,7 +4,7 @@
 	<title>Ethan Brand | Full text</title>
 	<link href="assets/style.css" rel="stylesheet">
 	<link href="../static/cdn/jfonts.css" rel="stylesheet">
-	Loading... <br>We are searching for the most up-to-date videos and screenshots for you. This should only take a second!
+	<p id="clearOnLoad">Loading... <br>We are searching for the most up-to-date videos and screenshots for you. This should only take a second!</p>
 </head>
 <body>
 
@@ -45,5 +45,6 @@ while(cont == true) {
 console.log(imgSrc)
 
 document.getElementById("MRvideo").src = "assets/videos/" + imgSrc
+document.getElementById("clearOnLoad").hidden = true
 	</script>
 </html>
