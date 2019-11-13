@@ -1,0 +1,43 @@
+<video id="MRvideo" width="100%" controls autoplay autobuffer></video>
+		<p style="font-size:10px;">This is the most recent version of this video (v<span id="fillMe"></span>). View the full history of our videos over on <a href="https://github.com/jackcrane/jackcrane.github.io/tree/master/ethanbrand/assets/videos">GitHub</a></p>
+
+<style>
+	body {
+		margin:0;
+		padding:0;
+	}
+</style>
+
+<script>
+function imageExists(image_url){
+
+    var http = new XMLHttpRequest();
+
+    http.open('HEAD', image_url, false);
+    http.send();
+
+    return http.status != 404;
+
+}
+
+var temp = 30;
+var imgSrc;
+cont = true
+while(cont == true) {
+	if(imageExists("assets/videos/EB_demo00" + temp + ".mp4")) {
+		imgSrc = "EB_demo00" + temp + ".mp4"
+		cont = false
+    } else {}
+	if(temp==0) {
+		cont = false
+	}
+	temp = temp-1
+	console.log("tried " + temp)
+}
+console.clear()
+console.log("Most recent file found: "+imgSrc+"!")
+
+document.getElementById("MRvideo").src = "assets/videos/" + imgSrc
+document.getElementById("fillMe").innerHTML = temp + 1
+document.getElementById("clearOnLoad").hidden = true
+</script>

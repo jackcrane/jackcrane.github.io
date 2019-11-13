@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ethan Brand | Full text</title>
+	<title>Ethan Brand | media</title>
 	<link href="assets/style.css" rel="stylesheet">
 	<link href="../static/cdn/jfonts.css" rel="stylesheet">
 	<p id="clearOnLoad">Loading... <br>We are searching for the most up-to-date videos and screenshots for you. This should only take a second!</p>
+	<script>
+	  function resizeIframe(obj) {
+	    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+	  }
+</script>
 </head>
 <body>
 
@@ -13,41 +18,5 @@
 	<a href="index.html">Back to home</a>
 	<div class="text">
 		<h2 class="libraryH2">Most recent recording</h2>
-		<video id="MRvideo" width="100%" controls autoplay autobuffer></video>
-		<p style="font-size:10px;">This is the most recent version of this video (v<span id="fillMe"></span>). View the full history of our videos over on <a href="https://github.com/jackcrane/jackcrane.github.io/tree/master/ethanbrand/assets/videos">GitHub</a></p>
-	</div>
-	</body>
-	<script>
-function imageExists(image_url){
-
-    var http = new XMLHttpRequest();
-
-    http.open('HEAD', image_url, false);
-    http.send();
-
-    return http.status != 404;
-
-}
-
-var temp = 30;
-var imgSrc;
-cont = true
-while(cont == true) {
-	if(imageExists("assets/videos/EB_demo00" + temp + ".mp4")) {
-		imgSrc = "EB_demo00" + temp + ".mp4"
-		cont = false
-    } else {}
-	if(temp==0) {
-		cont = false
-	}
-	temp = temp-1
-	console.log("tried " + temp)
-}
-console.clear()
-console.log("Most recent file found: "+imgSrc+"!")
-
-document.getElementById("MRvideo").src = "assets/videos/" + imgSrc
-document.getElementById("fillMe").innerHTML = temp
-document.getElementById("clearOnLoad").hidden = true
-	</script>
+		<iframe src="most_recent_vid.html" width="100%" style="border:none;outline:none" frameborder="no" scrolling="no" onload="this.style.height=this.contentDocument.body.scrollHeight +'px';"></iframe>
 </html>
