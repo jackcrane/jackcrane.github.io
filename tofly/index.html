@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
+		<script src="airports.js"></script>
+		<link href="fly.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		<div class="container">
+
+		<header>
+			<h2><a href="#"><i class="ion-plane"></i> To fly or not to fly?</a></h2>
+			<nav>
+				<ul>
+				<li>
+					<a class="btn" href="mailto:3jbc22@gmail.com" title="Contact">Contact</a>
+				</li>
+				</ul>
+			</nav>
+			</header>
+
+			<div class="cover">
+			<h1>Fit to fly?</h1>
+			<form class="flex-form shadow">
+				<input type="text" onkeyup='if(this.value != "") {document.getElementsByClassName("cover")[0].style.paddingTop = "10vh";} else {document.getElementsByClassName("cover")[0].style.paddingTop = "40vh";}' onfocus="hideResultsDiv()" id="autocomplete" placeholder="What airport are you flying from?">
+				<input type="button" id="search" value="Search" onclick="searchIcao()">
+			</form>
+			<div class="shadow results flex-form" id="resultsDiv">
+				<div id="loading">
+					<center>
+						<img src="loading.gif"><br>
+						<b>Fetching the latest data</b><br>
+						<p>This should only take a few seconds. Please do not leave this page</p>
+						<p>If it takes a long time, <a onclick="checkConnection()">check your API connection</a></p>
+					</center>
+				</div>
+				<div id="innerResults" hidden>
+					<b>Weather Station </b> <span id='station'></span><br>
+					<b>Timestamp </b> <span id='timestamp'></span><br>
+					<b>Wind </b> <span id='windSpeed'></span><b> at </b> <span id="windDirection"></span><br>
+					<b>Clouds </b><span id="cloudType"></span><b> at </b><span id="cloudAltitude"></span><br>
+					<b>Visibility </b><span id="visibility"></span>
+					<!-- <b style="color:red">Warnings </b> <span id="warnings"></span><br> -->
+				</div>
+				<div id="connectionCheck" hidden>
+					Connection okay.<br><br><b>Possible issues</b>: Some airports are not supported, your input may not have been an ICAO code
+				</div>
+				
+			</div>
+			<div id="madeby">
+				<span>
+					Photo for Lufthansa & planetside software by Marcin Gruszczyk. Used without permission
+				</span>
+			</div>
+		</div>
+
+		</div>
+		<script src="fly.js"></script>
+	</body>
+</html>
