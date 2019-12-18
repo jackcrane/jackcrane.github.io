@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #3c3c3c;
+}
+
+
+.card {
+  position: relative;
+  
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Light blue cover above the slide show*/
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 900;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(140, 22, 115, 0.2);
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+  transform: translateX( 700px );
+  background-image: url( "../../images/admir.jpg" );
+  background-size:115%;
+  background-attachment: center;
+  background-repeat:no-repeat;
+  
+  animation: opaqTransition 30s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+.card_part.card_part-ten {
+  z-index: 4;
+  background-image: url( ../../images/wolves.jpg );
+  animation-delay: 0s;
+}
+
+.card_part.card_part-two {
+  z-index: 12;
+  background-image: url( ../../images/admir2.jpg );
+  animation-delay: 3s;
+}
+
+.card_part.card_part-three {
+  z-index: 11;
+  background-image: url( ../../images/admir3.jpg );
+  animation-delay: 6s;
+}
+
+.card_part.card_part-four {
+  z-index: 10;
+  background-image: url( ../../images/admir4.jpg );
+  animation-delay: 9s;
+}
+
+.card_part.card_part-five {
+  z-index: 9;
+  background-image: url( ../../images/fort.jpg );
+  animation-delay: 12s;
+}
+
+.card_part.card_part-six {
+  z-index: 8;
+  background-image: url( ../../images/landscape.png );
+  animation-delay: 15s;
+}
+
+.card_part.card_part-seven {
+  z-index: 7;
+  background-image: url( ../../images/outskirts.jpg );
+  animation-delay: 18s;
+}
+
+.card_part.card_part-eight {
+  z-index: 6;
+  background-image: url( ../../images/rich.jpg );
+  animation-delay: 21s;
+}
+
+.card_part.card_part-nine {
+  z-index: 5;
+  background-image: url( ../../images/snow.jpg );
+  animation-delay: 24s;
+}
+
+
+
+
+@keyframes opaqTransition {
+  3% { transform: translateX( 0 ); }
+  25% { transform: translateX( 0 ); }
+  28% { transform: translateX( -700px ); }
+  100% { transform: translateX( -700px ); }
+}

@@ -203,7 +203,7 @@ function printResults(jsons) {
   document.getElementById('windDirection').innerHTML = jsonsParsed.forecast[0].wind_direction.value
   document.getElementById('cloudType').innerHTML = jsonsParsed.forecast[0].clouds[0].type
   document.getElementById('cloudAltitude').innerHTML = jsonsParsed.forecast[0].clouds[0].altitude
-  document.getElementById('visibility').innerHTML = jsonsParsed.forecast[0].visibility.spoken
+  document.getElementById('visibility').innerHTML = jsonsParsed.forecast[0].visibility.value
   
   document.getElementById('loading').hidden=true
   document.getElementById('innerResults').hidden=false
