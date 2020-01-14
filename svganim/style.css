@@ -1,0 +1,25 @@
+#right_panel {
+    position: absolute;
+    width: 30%;
+    padding-left: 4px;
+    height: 100%;
+    right: 0;
+    background-color: #303030;
+}
+
+#right_panel:after {
+    content: " ";
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    cursor: w-resize;
+}
+
+
+html, body {
+    border:0;
+    margin:0;
+    padding:0;
+}
