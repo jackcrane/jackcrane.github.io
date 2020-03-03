@@ -40,13 +40,13 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-	a {
+	.a .b {
 		padding:2%!important;
 	}
 }
 
 @media only screen and (max-width: 400px) {
-	a {
+	.a .b {
 		padding:3%!important;
 	}
 }
@@ -59,7 +59,7 @@ h1 {
 	font-size:6rem!important;
 }
 
-a {
+.a {
 	color:white;
 	text-decoration:none;
 	padding:1%;
@@ -72,7 +72,7 @@ a {
 	transition:.3s;
 }
 
-a:hover {
+.a:hover {
 	background-position:left bottom;
 	color:black;
 }
