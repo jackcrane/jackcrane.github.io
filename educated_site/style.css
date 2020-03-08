@@ -96,13 +96,13 @@ input:disabled {
 	transform:translate(-25px, -15px);
 }
 
-@media only screen and (min-width: 899px) {
+@media only screen and (min-width: 664px) {
 	.svgwrapper svg {
 		width:110%;
 	}
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 665px) {
 	.main {
 		width:76%!important;
 		margin:10% 10%;
