@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
 
+:root {
+	--lightblue: #03d1e7;
+	--darkblue:#062238;
+}
+
 .main {
 	width:46%;
 	margin:3% 25%;
 	padding:2%;
     background-color: #062238;
 	position:absolute;
-	border:.75px solid #03d1e7;
+	border:.75px solid var(--lightblue);
 	color:white;
 	font-family:'Sen',sans-serif;
 	transition:opacity 2s ease-in-out;;
@@ -14,8 +19,45 @@
 }
 
 a {
-	color:#03d1e7;
+	color:var(--lightblue);
 	text-align:center;
+}
+
+select, input[type=text] {
+	width:98%;
+	background-color:transparent;
+    border: 1px solid var(--lightblue);
+    outline:none;
+    color:white;
+    font-family:'Sen',sans-serif;
+    padding:1%;
+    transition:.3s;
+}
+
+select {
+	width:100.5%;
+}
+
+option {
+	background-color:var(--darkblue);
+}
+
+input[type=text]:focus {
+	background-color:white;
+    color:var(--darkblue);
+}
+
+input:disabled {
+	border-color:red;
+}
+
+.warn {
+	color:red;
+}
+
+.form {
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .main h1 {
@@ -34,7 +76,7 @@ a {
 }
 
 .main span {
-	color:#03d1e7;
+	color:var(--lightblue);
 }
 
 .wrapper {
