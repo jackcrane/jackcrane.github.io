@@ -23,10 +23,11 @@ a {
 	text-align:center;
 }
 
-select, input[type=text] {
+select, input[type=text], input[type=submit] {
 	width:98%;
 	background-color:transparent;
     border: 1px solid var(--lightblue);
+    border-radius:0;
     outline:none;
     color:white;
     font-family:'Sen',sans-serif;
@@ -34,7 +35,7 @@ select, input[type=text] {
     transition:.3s;
 }
 
-select {
+select, input[type=submit] {
 	width:100.5%;
 }
 
