@@ -1,0 +1,142 @@
+:root {
+	--black-rep:#2f2f2f;
+	--lightgrey:#f6f8f8;
+}
+
+body, html {
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.maincontent.padded {
+	padding:0 10%;
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+.navbar .right {
+	display:table;
+}
+
+.navbar .right a {
+	display: inline-block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color:var(--black-rep);
+    text-decoration:none;
+    padding:0 10px;
+    margin-left:10px;
+    margin-right:10px;
+    border:2px solid white;
+    border-radius:5px;
+    border-spacing:9px;
+    -moz-transition: border .3s;
+    -o-transition: border .3s;
+    -webkit-transition: border .3s;
+    transition: border .3s;
+}
+
+.navbar .right a:hover {
+	border:2px solid var(--black-rep);
+	border-radius:5px;
+}
+
+.index-split {
+	width:100%;
+	height:90vh;
+}
+
+.index-left {
+	float:left;
+	display:table;
+	height:100%;
+	background-color:var(--black-rep);
+	width:43%;
+    border-top-left-radius: 26px;
+    border-bottom-left-radius: 26px;
+    padding-left:7%;
+}
+
+.index-left .content h1 {
+    font-size: 3.5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.index-left .btn {
+	background-color:var(--lightgrey);
+    padding: 18px;
+    border-radius: 5px;
+    line-height: 5;
+    text-decoration:none;
+    transition:background-color .3s;
+}
+
+.index-left .btn:hover {
+	background-color:#dadada
+}
+
+.index-left .content {
+	display: table-cell;
+	vertical-align: middle;
+	color:var(--lightgrey);
+}
+
+.index-right {
+	float:right;
+	display:table;
+	height:100%;
+	background-color:var(--lightgrey);
+	width:43%;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+    padding-left:7%;
+}
+
+.index-right .content {
+	display: table-cell;
+	vertical-align: middle;
+	color:var(--black-rep);
+}
+
+.index-right .content h1 {
+    font-size: 3.5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.index-right .btn {
+	background-color:var(--black-rep);
+	color:var(--lightgrey);
+    padding: 18px;
+    border-radius: 5px;
+    line-height: 5;
+    text-decoration:none;
+    transition:background-color .3s;
+}
+
+.index-right .btn:hover {
+	background-color:#4e4e4e;
+}
+
+.light {
+	font-weight:lighter;
+}
