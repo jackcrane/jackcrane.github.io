@@ -63,7 +63,7 @@ body, html {
 
 .index-split {
 	width:100%;
-	height:90vh;
+	height:80vh;
 }
 
 .index-left {
@@ -83,18 +83,7 @@ body, html {
     margin-block-end: 0;
 }
 
-.index-left .btn {
-	background-color:var(--lightgrey);
-    padding: 18px;
-    border-radius: 5px;
-    line-height: 5;
-    text-decoration:none;
-    transition:background-color .3s;
-}
 
-.index-left .btn:hover {
-	background-color:#dadada
-}
 
 .index-left .content {
 	display: table-cell;
@@ -125,20 +114,97 @@ body, html {
     margin-block-end: 0;
 }
 
-.index-right .btn {
-	background-color:var(--black-rep);
-	color:var(--lightgrey);
-    padding: 18px;
+.thin {
+	font-weight:lighter;
+}
+
+.footer {
+    text-align:center;
+}
+
+.footer p {
+    color:grey;
+}
+
+
+/*BUTTONS*/
+
+.btn {
+    padding: 15px;
     border-radius: 5px;
-    line-height: 5;
+    line-height: 3;
     text-decoration:none;
     transition:background-color .3s;
+    font-size: 22px;
+    font-weight: bold;
+    background-color:var(--bgc);
+    color:var(--hlc);
 }
 
-.index-right .btn:hover {
-	background-color:#4e4e4e;
+.btn:hover {
+    background-color:var(--hovc);
 }
 
-.light {
-	font-weight:lighter;
+.btn.outline {
+    line-height:3;
+    padding:11px;
+    border:4px solid var(--bgc);
+    color:var(--bgc);
+    background-color:var(--hlc);
+}
+
+.btn.outline:hover {
+    background-color: var(--olhovc)!important;
+}
+
+.btn.outline.light,.btn.outline.dark {
+    line-height:3;
+    padding:11px;
+    border:4px solid var(--hlc);
+    color:var(--hlc);
+    background-color:var(--bgc);
+}
+
+/*.btn.outline.light:hover,.btn.outline.dark:hover {
+    background-color: var(--hovc)!important;
+}*/
+
+.btn.light {
+    --bgc:var(--lightgrey);
+    --hlc:var(--black-rep);
+    --hovc:#dadada;
+    --olhovc:#dadada;
+}
+
+.btn.dark {
+    --bgc:var(--black-rep);
+    --hlc:var(--lightgrey);
+    --hovc:#4e4e4e;
+    --olhovc:#4e4e4e;
+}
+
+.btn.blue {
+    --bgc:#0D79F2;
+    --hlc:white;
+    --hovc:#479af7;
+    --olhovc: #cbe4ff;
+}
+
+.btn.red {
+    --bgc:red;
+    --hlc:white;
+    --hovc: #ff5b5b;
+    --olhovc:#ffdede;
+}
+
+.btn.green {
+    --bgc:#3FAF9D;
+    --hlc:white;
+    --hovc: #5fc1b1;
+    --olhovc: #e1fff9;
+}
+
+.btn.disabled {
+    pointer-events: none;
+    opacity:.4;
 }
