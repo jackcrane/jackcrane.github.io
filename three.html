@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Three Js Demo</title>
+    <script src="https://threejs.org/build/three.min.js"></script>
+  </head>
+  <body>
+<script type="text/javascript">
+
+  var scene, camera, renderer;
+  var geometry, material, mesh;
+
+  init();
+  animate();
+
+  function init() {
+
+  	scene = new THREE.Scene();
+
+  	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+  	camera.position.z = 1000;
+
+  	geometry = new THREE.BoxGeometry( 200, 200, 200 );
+  	material = new THREE.MeshBasicMaterial( { color: 0xff6600, wireframe: false } );
+
+  	mesh = new THREE.Mesh( geometry, material );
+  	scene.add( mesh );
+
+    geometry1 = new THREE.BoxGeometry( 200, 200, 200 );
+  	material1 = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true } );
+
+  	mesh1 = new THREE.Mesh( geometry1, material1 );
+  	scene.add( mesh1 );
+
+  	renderer = new THREE.WebGLRenderer();
+  	renderer.setSize( window.innerWidth, window.innerHeight );
+
+  	document.body.appendChild( renderer.domElement );
+
+  }
+
+  function animate() {
+
+  	requestAnimationFrame( animate );
+
+  	mesh.rotation.x += 0.04;
+  	mesh.rotation.y += 0.08;
+
+    mesh1.rotation.x += 0.04;
+    mesh1.rotation.y += 0.08;
+
+  	renderer.render( scene, camera );
+
+  }
+
+
+</script>
+  </body>
+</html>

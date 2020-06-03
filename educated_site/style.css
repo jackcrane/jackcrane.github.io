@@ -23,7 +23,7 @@ a {
 	text-align:center;
 }
 
-select, input[type=text], input[type=submit] {
+select, input[type=text], input[type=submit], button {
 	width:98%;
 	background-color:transparent;
     border: 1px solid var(--lightblue);
@@ -35,7 +35,7 @@ select, input[type=text], input[type=submit] {
     transition:.3s;
 }
 
-select, input[type=submit] {
+select, input[type=submit], button {
 	width:100.5%;
 }
 
@@ -48,12 +48,12 @@ input[type=text]:focus {
     color:var(--darkblue);
 }
 
-input:disabled {
+input:disabled, select:disabled {
 	border-color:red;
 }
 
 .warn {
-	color:red;
+	color:red!important;
 }
 
 .form {
