@@ -5,7 +5,7 @@
 		<script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
 		<script src="airports.js"></script>
 		<link href="fly.css" rel="stylesheet">
-		
+
 	</head>
 	<body>
 		<div class="container">
@@ -37,17 +37,22 @@
 					</center>
 				</div>
 				<div id="innerResults" hidden>
+					<h2>Airport Information</h2>
+					<b>ICAO </b><span id="icao"></span>
+					<hr>
+					<h2>Weather</h2>
 					<b>Weather Station </b> <span id='station'></span><br>
 					<b>Timestamp </b> <span id='timestamp'></span><br>
 					<b>Wind </b> <span id='windSpeed'></span><b> at </b> <span id="windDirection"></span><br>
 					<b>Clouds </b><span id="cloudType"></span><b> at </b><span id="cloudAltitude"></span><br>
-					<b>Visibility </b><span id="visibility"></span>
+					<b>Visibility </b><span id="visibility"></span><br>
+					<b>Raw </b><span id="raw"></span>
 					<!-- <b style="color:red">Warnings </b> <span id="warnings"></span><br> -->
 				</div>
 				<div id="connectionCheck" hidden>
 					Connection okay.<br><br><b>Possible issues</b>: Some airports are not supported, your input may not have been an ICAO code
 				</div>
-				
+
 			</div>
 			<div id="madeby">
 				<span>

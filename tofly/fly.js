@@ -1,52 +1,52 @@
-var options = {
-  shouldSort: true,
-  threshold: 0.4,
-  maxPatternLength: 32,
-  keys: [{
-    name: 'iata',
-    weight: 0.5
-  }, {
-    name: 'name',
-    weight: 0.3
-  }, {
-    name: 'city',
-    weight: 0.2
-  }]
-};
-
-var fuse = new Fuse(airports, options)
-
-
-var ac = $('#autocomplete')
-  .on('click', function(e) {
-    e.stopPropagation();
-  })
-  .on('focus keyup', search)
-  .on('keydown', onKeyDown);
-
-var wrap = $('<div>')
-  .addClass('autocomplete-wrapper')
-  .addClass('flex-form')
-  .insertBefore(ac)
-  .append(ac);
-
-var list = $('<div>')
-  .addClass('autocomplete-results')
-  .on('click', '.autocomplete-result', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    selectIndex($(this).data('index'));
-  })
-  .appendTo(wrap);
-
-$(document)
-  .on('mouseover', '.autocomplete-result', function(e) {
-    var index = parseInt($(this).data('index'), 10);
-    if (!isNaN(index)) {
-      list.attr('data-highlight', index);
-    }
-  })
-  .on('click', clearResults);
+// var options = {
+//   shouldSort: true,
+//   threshold: 0.4,
+//   maxPatternLength: 32,
+//   keys: [{
+//     name: 'iata',
+//     weight: 0.5
+//   }, {
+//     name: 'name',
+//     weight: 0.3
+//   }, {
+//     name: 'city',
+//     weight: 0.2
+//   }]
+// };
+//
+// var fuse = new Fuse(airports, options)
+//
+//
+// var ac = $('#autocomplete')
+//   .on('click', function(e) {
+//     e.stopPropagation();
+//   })
+//   .on('focus keyup', search)
+//   .on('keydown', onKeyDown);
+//
+// var wrap = $('<div>')
+//   .addClass('autocomplete-wrapper')
+//   .addClass('flex-form')
+//   .insertBefore(ac)
+//   .append(ac);
+//
+// var list = $('<div>')
+//   .addClass('autocomplete-results')
+//   .on('click', '.autocomplete-result', function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     selectIndex($(this).data('index'));
+//   })
+//   .appendTo(wrap);
+//
+// $(document)
+//   .on('mouseover', '.autocomplete-result', function(e) {
+//     var index = parseInt($(this).data('index'), 10);
+//     if (!isNaN(index)) {
+//       list.attr('data-highlight', index);
+//     }
+//   })
+//   .on('click', clearResults);
 
 function clearResults() {
   results = [];
@@ -58,7 +58,7 @@ function selectIndex(index) {
   if (results.length >= index + 1) {
     ac.val(results[index].iata);
     clearResults();
-  }  
+  }
 }
 
 var results = [];
@@ -69,18 +69,18 @@ function search(e) {
   if (e.which === 38 || e.which === 13 || e.which === 40) {
     return;
   }
-  
+
   if (ac.val().length > 0) {
     results = _.take(fuse.search(ac.val()), 7);
     numResults = results.length;
-    
+
     var divs = results.map(function(r, i) {
         return '<div class="autocomplete-result" data-index="'+ i +'">'
              + '<div><b>'+ r.iata +'</b> - '+ r.name +'</div>'
              + '<div class="autocomplete-location">'+ r.city +', '+ r.country +'</div>'
              + '</div>';
      });
-    
+
     selectedIndex = -1;
     list.html(divs.join(''))
       .attr('data-highlight', selectedIndex);
@@ -162,15 +162,25 @@ function sendReq(airpt) {
     if (this.readyState === 4) {
       console.log('Status:', this.status);
       console.log('Headers:', this.getAllResponseHeaders());
-      console.log('Body:', this.responseText);
+      // console.log('Body:', this.responseText);
       printResults(this.responseText)
-      console.log(this.responseText)
+      console.log(JSON.parse(this.responseText))
     }
   };
 
   var body = "PHKO 181735Z 1818/1918 VRB03KT P6SM FEW035 FM182000 20010KT P6SM FEW030 SCT060 FM190400 10007KT P6SM FEW030 BKN050 FM191200 VRB03KT P6SM SCT030";
 
   request.send(body)
+
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://tofly-backend.herokuapp.com/db.php?icao="+airpt, true);
+  xhttp.send();
 }
 
 function showResultsDiv() {
@@ -186,7 +196,7 @@ function hideResultsDiv() {
   document.getElementById('loading').hidden=false
   document.getElementById('innerResults').hidden=true
   document.getElementById('connectionCheck').hidden=true
-  
+
 }
 
 function searchIcao() {
@@ -203,8 +213,13 @@ function printResults(jsons) {
   document.getElementById('windDirection').innerHTML = jsonsParsed.forecast[0].wind_direction.value
   document.getElementById('cloudType').innerHTML = jsonsParsed.forecast[0].clouds[0].type
   document.getElementById('cloudAltitude').innerHTML = jsonsParsed.forecast[0].clouds[0].altitude
-  document.getElementById('visibility').innerHTML = jsonsParsed.forecast[0].visibility.value
-  
+  if(jsonsParsed.forecast[0].visibility.value!=null) {
+    document.getElementById('visibility').innerHTML = jsonsParsed.forecast[0].visibility.value
+  } else {
+    document.getElementById('visibility').innerHTML = jsonsParsed.forecast[0].visibility.spoken
+  }
+  document.getElementById('raw').innerHTML = jsonsParsed.forecast[0].raw
+
   document.getElementById('loading').hidden=true
   document.getElementById('innerResults').hidden=false
   document.getElementById('connectionCheck').hidden=true
