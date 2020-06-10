@@ -41,7 +41,7 @@ code {
 	color:black;
 }
 h1 {
-	font-family:'Product Sans';
+	font-family:'Product Sans', sans-serif;
 	font-size:4rem;
 }
 h2 {
