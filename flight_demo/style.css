@@ -1,0 +1,36 @@
+html {
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  font-family:sans-serif;
+}
+
+body {
+  background: url("Lufthansa_Feature.jpg") no-repeat center center fixed;
+  overflow:hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  padding:0;
+  margin:0;
+}
+
+.half {
+  backdrop-filter:blur(10px);
+  height:100vh;
+  width:50%;
+  padding:0;
+  margin:0;
+}
+
+.text-left {
+  /* mix-blend-mode: screen; */
+  background: url("Lufthansa_Feature.jpg") no-repeat center center fixed;
+  background-clip: text;
+  color: transparent;
+  position:absolute;
+  font-size:130px;
+  top:50%;
+  left:50%;
+  transform:translate(9%, -120%);
+}
