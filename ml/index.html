@@ -8,6 +8,8 @@
 <script type="text/javascript">
     const URL = "https://teachablemachine.withgoogle.com/models/8n_BYAot0/";
 
+    let masklessconf, maskconf;
+
     let model, webcam, labelContainer, maxPredictions;
 
     // Load the image model and setup the webcam
@@ -47,7 +49,12 @@
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
-            console.log(classPrediction);
+            if(classPrediction.includes("No mask")){
+              masklessconf = classPrediction.split(": ")[1]
+            } else {
+              maskconf = classPrediction.split(": ")[1]
+            }
+            console.log(maskconf);
         }
     }
 </script>
