@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="button" value="fire!" onclick="fire()">
+
+<script type="text/javascript">
+	
+	var lander = {
+		mass:0.3,
+		thrust:0.1,
+		inertia:1,
+		altitude:5
+	}
+
+	var gravityMultiplier = 1
+	var frameCount = 0;
+
+	function loop() {
+		// console.clear();
+		if(frameCount%100 == 0) {
+			lander.altitude = lander.altitude - (lander.mass*gravityMultiplier) + (lander.thrust*lander.inertia)
+			console.log(lander.altitude)
+		}
+		frameCount++
+	}
+
+	function fire() {
+		lander.altitude = lander.altitude - (lander.mass*gravityMultiplier) + (lander.thrust*lander.inertia)
+	}
+
+	setInterval(loop,0.001);
+
+</script>
+
+</body>
+</html>

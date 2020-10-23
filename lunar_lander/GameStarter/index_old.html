@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jack Crane | Lunar Lander</title>
+	<script src="https://jackcrane.github.io/static/cdn/jconsole.js" type="text/javascript"></script>
+	<script src="devlib.js" type="text/javascript"></script>
+	<link href="https://jackcrane.github.io/static/cdn/jfonts.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<style>
+		a {
+			color:inherit;
+			border:1px solid;
+			padding:1%;
+			margin:1%;
+			background-color:transparent;
+			cursor:pointer;
+		}
+		#canvas {
+			border:1px solid;
+			
+		}
+		.canvasParent{
+		    /*box-shadow: -1px 0px 9px 3px #FFF;*/
+		    overflow:auto;
+		    display:inline-block;
+		}
+	</style>
+	<script>
+		var darkMode = true
+		function darkModeToggle() {
+			if(!darkMode) {
+				document.body.style.backgroundColor='black';
+				document.body.style.color='white';
+				darkMode = true;
+				ctx.filter = 'invert(100%)';
+				document.getElementsByClassName('canvasParent')[0].setAttribute('style','box-shadow:-1px 0px 9px 3px white')
+			} else {
+				document.body.style.backgroundColor='white';
+				document.body.style.color='black';
+				darkMode = false;
+				ctx.filter = 'invert(0%)';
+				document.getElementsByClassName('canvasParent')[0].setAttribute('style','box-shadow:-1px 0px 9px 3px black')
+			}
+		}
+
+	</script>
+</head>
+<a onclick="darkModeToggle()">The all crucial dark mode</a>
+<body style="/*background-color:black;color:white;*/font-family:'Space Age';transition:.2s">
+<center><h1>Moon Lander</h1></center>
+
+<center><div class="canvasParent"><canvas id="canvas" width="800" height="520" style="transition:.2s"></canvas></div></center>
+
+<!-- Nothing quite like using deprecated elements -->
+
+<script>
+
+	var frameCount = 0;
+
+	var remainingFuel = 1000;
+	var remainingRetro = 500;
+	var remainingOxygen = 1000;
+
+	var deathCause = null;
+
+	var randomNumber = Math.floor(Math.random() * 13000) + 1;
+	
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext("2d");
+	
+	var game = new GameMaster();
+
+	function drawText() {
+		var text = new GameText();
+		text.font = "35px Arial";
+		if(!darkMode) {
+			text.fillStyle = "Black"
+		} else {text.fillStyle = "White"}
+		text.x = 100;
+		text.y = 100;
+		text.draw("Loading...");
+	}
+
+	function drawScoreText() {
+		var text = new GameText();
+		text.font = "20px Roboto Mono";
+		text.fillStyle = "white";
+		// text.alpha = .9;
+
+
+		text.x = 10;
+		text.y = 20;
+		if(frameCount%2||frameCount%3) {
+			text.draw("Remaining:");
+		}
+
+		text.x = 25;
+		text.y = 45;
+		if(frameCount%2||frameCount%3) {
+			text.draw("Fuel: " + remainingFuel + "");
+		}
+
+		text.x = 25;
+		text.y = 70;
+		if(frameCount%2||frameCount%3) {
+			text.draw("Retro: " + remainingRetro);
+		}
+
+		text.x = 25;
+		text.y = 95;
+		if(frameCount%2||frameCount%3) {
+			text.draw("Oxygen: " + remainingOxygen);
+		}
+
+		text.x = 600;
+		text.y = 20;
+		text.draw("Frames: " + frameCount);
+		
+	}
+
+	function dir(a) {
+		return game.imageDir + a;
+	}
+
+	function makeBackground() {
+
+		var background = new Image();
+		background.src = dir('terrain_v2_dark.png');
+		var bg = new ScrollingBackGround(randomNumber,0,13000,2080,3250,520,background);
+		bg.draw();
+	}
+
+	function calcLife() {
+		if(frameCount%13===0) {
+			remainingOxygen--;
+		}
+	}
+
+	function alive() {
+		if(remainingOxygen >= 0) {
+			return true
+		} else {
+			return false
+			deathCause = "ran out of oxygen"
+		}
+	}
+
+	function drawDeathScreen() {
+		var text = new GameText();
+		text.font = "50px Hacked";
+		text.fillStyle = "white";
+		text.x = 260;
+		text.y = 120;
+		text.draw("You crashed!")
+
+		text.x = 230;
+		text.y = 320;
+		text.draw("It seems you " + deathCause)
+	}
+
+	function draw() {
+		frameCount++;
+		ctx.fillStyle = "black";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+		calcLife();
+		if(alive()) {
+			drawText();
+			makeBackground();
+			drawScoreText();
+		} else {
+			drawDeathScreen();
+		}
+	}
+
+	setInterval(draw, 0.01)
+
+	darkModeToggle()
+
+</script>
+
+
+</body>
+</html>
