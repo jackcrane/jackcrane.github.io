@@ -1,0 +1,95 @@
+body {
+  background:url(http://teardowngame.com/images/s1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.btn {
+  background-color: var(--bgc);
+  padding: 10px;
+  margin: 30px;
+  text-decoration: none;
+  color: white;
+  background: rgb(0,128,255);
+  background: -moz-radial-gradient(circle, var(--bgc-rgb) 0%, var(--bgc-rgb-darker) 100%);
+  background: -webkit-radial-gradient(circle, var(--bgc-rgb) 0%, var(--bgc-rgb-darker) 100%);
+  background: radial-gradient(circle, var(--bgc-rgb) 0%, var(--bgc-rgb-darker) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--bgc)",endColorstr="var(--bgc-hex-darker)",GradientType=1);
+  -webkit-box-shadow: 0px 0px 15px 4px var(--bgc-rgb-ha);
+  box-shadow: 0px 0px 15px 4px var(--bgc-rgb-ha);
+  transition: .2s;
+  line-height: 3;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0px 0px 15px 4px var(--bgc-rgb-ha);
+  box-shadow: 0px 0px 15px 4px var(--bgc-rgb-ha);
+}
+
+.blue {
+  --bgc:#0080ff;
+  --bgc-rgb:rgba(0,128,255,1);
+  --bgc-rgb-ha:rgba(0,128,255,50%);
+  --bgc-rgb-darker:rgba(0,100,200,1);
+  --bgc-hex-darker:#0064c8;
+}
+
+.red {
+  --bgc: #ff0000;
+  --bgc-rgb: rgba(255,0,0,1);
+  --bgc-rgb-ha: rgb(255,0,0,50%);
+  --bgc-rgb-darker: rgba(200,0,0,1);
+  --bgc-hex-darker: #c80000;
+}
+
+.vcenter-parent {
+  display:table;
+  height:100vh;
+  width:100%;
+}
+
+.vcenter-child {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+
+.whitebg {
+  background-color:white;
+}
+
+.white {
+  color:white;
+}
+
+.clipped {
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+}
+
+.sysreq, .sysreq tr {
+  width:100%;
+  margin-left:0%;
+}
+
+.sysreq td {
+  width:20%;
+}
+
+footer {
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+  height:50vh;
+  background-color:white;
+}
+
+h1 {
+  font-size:4em!important;
+}
+
+@media only screen and (max-width: 600px) {
+  .hide-on-mobile {
+    display:none;
+  }
+}
