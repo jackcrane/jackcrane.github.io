@@ -1,0 +1,65 @@
+.header-container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.title {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size:45px;
+}
+.subtitle {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display:none;
+}
+html, body { /*we do not use the . before the class name because we are styling tags, not classes. Usually a bad practice, but excusable for the HTML and Body tags.*/
+	padding: 0;
+	margin: 0;
+	height:100%;
+}
+body {
+	padding-bottom: 10%;
+}
+.footer {
+	height:10%;
+	width:100%;
+	background-color: lightgrey;
+	bottom:0;
+	padding: 1%;
+	text-align: center;
+}
+.padded_container {
+	margin-left:5%;
+	margin-right:5%;
+	margin-bottom:5%;
+}
+.padded_sys {
+	/*width:19%;
+	float:left;
+	display:inline-block;*/
+	border:1px solid black;
+	text-align:center;
+	margin:.5%;
+	padding-bottom:2%;
+	margin-bottom:2%;
+}
+@media only screen and (min-width: 900px) {
+	.padded_sys {
+		float:left;
+		display:inline-block;
+		width:19%;
+	}
+	.padded_container {
+		margin-left:15%;
+		display:inline-block;
+	}
+	.subtitle {
+		display:block;
+	}
+	
+}

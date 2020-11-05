@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jack Crane</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<link href="newStyle.css" rel="stylesheet">
+	<script src="TemplateData/UnityProgress.js"></script>
+	<script src="Build/UnityLoader.js"></script>
+	<script src="newScript.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/0.4.json", {onProgress: UnityProgress});
+
+    </script>
+</head>
+<body>
+	<div class="masterContainer">
+		<div class="gl backg">
+			<div id="unityContainer" style="width: 100%; height: 100%"></div>
+			<!-- Unity-powered webGL Plugin, interacting with browser JS -->
+		</div>
+		<div class="section">
+			<div class="sect wave" onmouseover="sendWave()">
+				<div class="subsect">
+					<h1>Hi, Im Jack.</h1>
+					<p>I am a web developer with a few extra skills.<br><br>
+					I am in High School and am competing on FTC Team 14365<br><br>
+					I go to the Summit Country Day school in Cincinnati, Ohio
+					</p>
+					<br><br><br><br><br><br><br><br>
+					<p>Scroll Down</p>
+				</div>
+			</div>
+			<div class="subsect"><hr></div>
+			<div class="sect walk" onmouseover="sendWalk()">
+				<div class="subsect">
+					<h1>I started with HTML</h1>
+					<a href="http://fan5fll.github.io">My first website</a><br><br>
+					<sp>I made this website when I was 11 years old</sp><br><br><br>
+					<h2>Then shifted my focus to Javascript...</h2>
+					<a href="http://jackcrane.github.io/map">My first webapp</a><br><br>
+					<sp>Simple, non-stylized web application for school</sp><br><br><br>
+					<h2 style="font-size:1.7rem">Then php...</h2>
+					<h2 style="font-size:1.5rem">Then python...</h2>
+					<h2 style="font-size:1.3rem">Then java...</h2>
+					<h2 style="font-size:1rem">Then c#...</h2>
+					<h2 style="font-size:0.7rem">Then mysql...</h2>
+					<h2 style="font-size:0.5rem">Then C++...</h2>
+					<h2>My previous works:</h2>
+					<a href="http://scarecrowrow2.github.io">Scarecrow Row 2</a>
+					<a href="http://projectwisp.github.io">Project Wisp</a>
+				</div>
+			</div>
+			<div class="subsect"><hr></div>
+			<div class="sect run" onmouseover="sendRun()">
+				<div class="subsect">
+					<h1>How does this page work?</h1>
+					<sp>If on mobile, skip this section, or go to a computer to experience this website to its fullest.</sp>
+					<p>I am using <a href="https://unity3d.com">Unity 3d</a> to power the background, using a <a href="https://docs.unity3d.com/Manual/webgl-building.html">webGL build</a>.</p>
+					<p>I then am using Javascript to <a href="https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html">send information to Unity C#</a>, which then updates the animation</p>
+					<p>Powered by Javascript, C#, and Unity 3d</p>
+					<br>
+					<p>Special thanks to <a href="https://www.thingiverse.com/duck_toy">duck_toy</a> for the <a href="https://www.thingiverse.com/thing:2863108">low poly person model</a>, and Adobe-powered <a href="https://www.mixamo.com/">Mixamo</a> for the animations</p>
+					<br>
+					<p>Download the Unity project <a href="https://drive.google.com/file/d/1mykmQST3nbllCYOLLP_SSQh3ClTK_LsC/view?usp=sharing">here</a></p>
+					<br>
+				</div>
+			</div>
+			<div class="subsect"><hr></div>
+			<div class="sect backflip" onmouseover="sendBackflip()">
+				<div class="subsect">
+					<h1>Like what you see? Lets get in contact!</h1>
+					<br>
+					<p>Head over to my current GitHub <a href="https://github.com/jackcrane">@jackcrane</a>, or my older GitHub <a href="https://github.com/fan5fll">@fan5fll</a></p><br>
+					<p>Add me on Discord  <code>fantastic1#0597</code></p><br>
+					<p>Or just shoot me an email at <a href="mailto:3jbc22@gmail.com">3jbc22@gmail.com</a></p>
+					<br>
+					<br>
+					<h2>Want to use what I have made?</h2>
+					<a href="https://github.com/jackcrane/jackcrane.github.io/wiki/jconsole">jconsole</p>
+				</div>				
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

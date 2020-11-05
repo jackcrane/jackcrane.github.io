@@ -1,88 +1,109 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Jack Crane</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-	<link href="newStyle.css" rel="stylesheet">
-	<script src="TemplateData/UnityProgress.js"></script>
-	<script src="Build/UnityLoader.js"></script>
-	<script src="newScript.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/0.4.json", {onProgress: UnityProgress});
-
-    </script>
-</head>
-<body>
-	<div class="masterContainer">
-		<div class="gl backg">
-			<div id="unityContainer" style="width: 100%; height: 100%"></div>
-			<!-- Unity-powered webGL Plugin, interacting with browser JS -->
-		</div>
-		<div class="section">
-			<div class="sect wave" onmouseover="sendWave()">
-				<div class="subsect">
-					<h1>Hi, Im Jack.</h1>
-					<p>I am a web developer with a few extra skills.<br><br>
-					I am in High School and am competing on FTC Team 14365<br><br>
-					I go to the Summit Country Day school in Cincinnati, Ohio
-					</p>
-					<br><br><br><br><br><br><br><br>
-					<p>Scroll Down</p>
-				</div>
-			</div>
-			<div class="subsect"><hr></div>
-			<div class="sect walk" onmouseover="sendWalk()">
-				<div class="subsect">
-					<h1>I started with HTML</h1>
-					<a href="http://fan5fll.github.io">My first website</a><br><br>
-					<sp>I made this website when I was 11 years old</sp><br><br><br>
-					<h2>Then shifted my focus to Javascript...</h2>
-					<a href="http://jackcrane.github.io/map">My first webapp</a><br><br>
-					<sp>Simple, non-stylized web application for school</sp><br><br><br>
-					<h2 style="font-size:1.7rem">Then php...</h2>
-					<h2 style="font-size:1.5rem">Then python...</h2>
-					<h2 style="font-size:1.3rem">Then java...</h2>
-					<h2 style="font-size:1rem">Then c#...</h2>
-					<h2 style="font-size:0.7rem">Then mysql...</h2>
-					<h2 style="font-size:0.5rem">Then C++...</h2>
-					<h2>My previous works:</h2>
-					<a href="http://scarecrowrow2.github.io">Scarecrow Row 2</a>
-					<a href="http://projectwisp.github.io">Project Wisp</a>
-				</div>
-			</div>
-			<div class="subsect"><hr></div>
-			<div class="sect run" onmouseover="sendRun()">
-				<div class="subsect">
-					<h1>How does this page work?</h1>
-					<sp>If on mobile, skip this section, or go to a computer to experience this website to its fullest.</sp>
-					<p>I am using <a href="https://unity3d.com">Unity 3d</a> to power the background, using a <a href="https://docs.unity3d.com/Manual/webgl-building.html">webGL build</a>.</p>
-					<p>I then am using Javascript to <a href="https://docs.unity3d.com/Manual/webgl-interactingwithbrowserscripting.html">send information to Unity C#</a>, which then updates the animation</p>
-					<p>Powered by Javascript, C#, and Unity 3d</p>
-					<br>
-					<p>Special thanks to <a href="https://www.thingiverse.com/duck_toy">duck_toy</a> for the <a href="https://www.thingiverse.com/thing:2863108">low poly person model</a>, and Adobe-powered <a href="https://www.mixamo.com/">Mixamo</a> for the animations</p>
-					<br>
-					<p>Download the Unity project <a href="https://drive.google.com/file/d/1mykmQST3nbllCYOLLP_SSQh3ClTK_LsC/view?usp=sharing">here</a></p>
-					<br>
-				</div>
-			</div>
-			<div class="subsect"><hr></div>
-			<div class="sect backflip" onmouseover="sendBackflip()">
-				<div class="subsect">
-					<h1>Like what you see? Lets get in contact!</h1>
-					<br>
-					<p>Head over to my current GitHub <a href="https://github.com/jackcrane">@jackcrane</a>, or my older GitHub <a href="https://github.com/fan5fll">@fan5fll</a></p><br>
-					<p>Add me on Discord  <code>fantastic1#0597</code></p><br>
-					<p>Or just shoot me an email at <a href="mailto:3jbc22@gmail.com">3jbc22@gmail.com</a></p>
-					<br>
-					<br>
-					<h2>Want to use what I have made?</h2>
-					<a href="https://github.com/jackcrane/jackcrane.github.io/wiki/jconsole">jconsole</p>
-				</div>				
-			</div>
-		</div>
-	</div>
-	
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Crane</title>
+  </head>
+  <body>
+    <div class="vcp hc">
+      <section class="me vcc">
+        <h1>Hi 👋<br>I'm Jack!</h1>
+        <h3>I am a high schooler with a passion for programming</h3>
+        <a href="#projects" class="btn">Peek at my projects</a>
+      </section>
+    </div>
+    <div class="advance hc" id="projects">Scroll down</div>
+    <div class="hc" style="display:inline-block;">
+      <section class="projects">
+        <div>
+          <div class="cardContainer">
+            <div class="card" rcattr="borderColor">
+              <img src="qc.png">
+              <span>Quizlet Coalition</span><br><br>
+              <a class="btn" href="https://quizletcoalition.cc">Visit</a><a class="btn" href="https://quizletcoalition.cc/about.php">About</a>
+              <ul>
+                <li>Tech stack: PHP, MySQL, HTML, JS, CSS, DigitalOcean</li>
+                <li>Objective: Self-made api, Search Engine</li>
+              </ul>
+            </div>
+            <div class="card" rcattr="borderColor">
+              <img src="sr.png">
+              <span>Scarecrow Row</span><br><br>
+              <a class="btn" href="http://scarecrowrow.org">Visit</a>
+              <ul>
+                <li>Tech stack: HTML, CSS, JS, GitHub Pages, Formspree, Google Analytics</li>
+                <li>Objective: SEO, Customer relations</li>
+              </ul>
+            </div>
+            <div class="card" rcattr="borderColor">
+              <img src="tf.png">
+              <span>To Fly</span><br><br>
+              <a class="btn" href="http://jackcrane.github.io/tofly">Visit</a>
+              <ul>
+                <li>Tech stack: HTML, CSS, JS, GitHub Pages</li>
+                <li>Objective: API Calls</li>
+              </ul>
+            </div>
+            <div class="card" rcattr="borderColor">
+              <img src="7p.png">
+              <span>7 Sigma Robotics</span><br><br>
+              <a class="btn" href="http://fan5fll.com/7sigmarobotics">Visit</a>
+              <ul>
+                <li>Tech stack: HTML, CSS, GitHub Pages</li>
+                <li>Objective: Landing page for my robotics team</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div><br><br><br><br><br><br>
+    <div class=" hc">
+      <section class="">
+        <h1>I ❤️ writing code.</h1>
+        <div class="card" rcattr="borderColor">
+          <h3>Here's what I'm great at:</h3>
+          <ul>
+            <li>HTML & Semantics</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+        <div class="card" rcattr="borderColor">
+          <h3>Here's what I'm learning:</h3>
+          <ul>
+            <li>React/vue</li>
+            <li>Python</li>
+            <li>Tensorflow</li>
+            <li>Unity/ue4</li>
+            <li>node.js</li>
+          </ul>
+        </div>
+        <div class="card" rcattr="borderColor" style="width:80%;">
+          <h3>Here's what I use:</h3>
+          <ul>
+            <li>IDE: Atom/Android Studio</li>
+            <li>Static websites: GitHub Pages</li>
+            <li>Small-scale PHP applications: Heroku</li>
+            <li>Large-scale PHP applications: DigitalOcean</li>
+            <li>3D games: Unity</li>
+            <li>3D Modeling: Rhino 6, OnShape, Blender</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="vcp hc">
+      <section class="vcc">
+        <h1>Like what you see?</h1>
+        <a class="btn" href="mailto:3jbc22@gmail.com">Email me!</a><br>
+        <a class="btn" href="https://github.com/jackcrane">Or check out my GitHub</a><br>
+        <span class="btn">Or talk to me on Discord <code>14365jack#0597</code></span>
+      </section>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
