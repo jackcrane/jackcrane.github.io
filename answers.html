@@ -6,7 +6,8 @@
   <!-- <form action="https://quizletcoalition.cc/nqc/answer.php" method="GET"> -->
     <textarea placeholder="context" name="c" id="c"></textarea>
     <textarea placeholder="question" name="q" id="q"></textarea>
-    <button onclick="submit()">Submit</button>
+    <button onclick="submit()">Submit (context is a paragraph)</button>
+    <button onclick="submiturl()">Submit (context is a url)</button>
     <code><div style="background-color:lightgrey;" class="shorten" id="responseBox">The response will go here. (be patient, it takes a few seconds)</div></code>
     <!-- <input type="submit"> -->
   <!-- </form> -->
@@ -52,6 +53,22 @@ textarea,button,p,.shorten {
     let c = document.getElementById("c").value
     let q = document.getElementById("q").value
     let request = "https://quizletcoalition.cc/nqc/answer.php?c=" + c + "&q=" + q
+    document.getElementById("responseBox").innerHTML = "Thinking.....";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("responseBox").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", request, true);
+    xhttp.send();
+  }
+
+  function submiturl() {
+    let c = document.getElementById("c").value
+    let q = document.getElementById("q").value
+    let request = "https://quizletcoalition.cc/nqc/answer_article.php?c=" + c + "&q=" + q
     document.getElementById("responseBox").innerHTML = "Thinking.....";
 
     var xhttp = new XMLHttpRequest();
