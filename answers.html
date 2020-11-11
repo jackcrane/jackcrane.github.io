@@ -52,6 +52,7 @@ textarea,button,p,.shorten {
     let c = document.getElementById("c").value
     let q = document.getElementById("q").value
     let request = "https://quizletcoalition.cc/nqc/answer.php?c=" + c + "&q=" + q
+    document.getElementById("responseBox").innerHTML = "Thinking.....";
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
