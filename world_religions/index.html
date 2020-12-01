@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <select id="rel1" onchange="Venn.update()">
+      <option value="default">Default</option>
+      <option value="judaism">Judaism</option>
+      <option value="islam">Islam</option>
+      <option value="christianity">Christianity</option>
+      <option value="hinduism">Hinduism</option>
+      <option value="buddhism">Buddhism</option>
+      <option value="confucianism">Confucianism</option>
+      <option value="taoism">Taoism</option>
+      <option value="shintoism">Shintoism</option>
+    </select>
+    <select id="rel2" onchange="Venn.update()">
+      <option value="default">Default</option>
+      <option value="judaism">Judaism</option>
+      <option value="islam">Islam</option>
+      <option value="christianity">Christianity</option>
+      <option value="hinduism">Hinduism</option>
+      <option value="buddhism">Buddhism</option>
+      <option value="confucianism">Confucianism</option>
+      <option value="taoism">Taoism</option>
+      <option value="shintoism">Shintoism</option>
+    </select>
+    <p>Directions: Use the inputs to select two religions to compare</p>
+      <article class="Venn2">
+  		<h2>Religions</h2>
+  		<div class="circle one">
+  			<span></span>
+  			<span></span>
+  			<h3 id="rightTitle">One</h3>
+  			<p id="left"></p>
+  		</div>
+  		<div class="circle two">
+  			<span></span>
+  			<span></span>
+  			<h3 id="leftTitle">Two</h3>
+  			<p id="right"></p>
+  		</div>
+  		<div class="shape onetwo">
+  			<span></span>
+  			<span></span>
+  			<h3>One + Two</h3>
+  			<p id="overlap"></p>
+  		</div>
+  	</article>
+  </body>
+</html>
