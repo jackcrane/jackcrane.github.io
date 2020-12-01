@@ -1,0 +1,190 @@
+<body style="padding:0;margin:0;"><div style="background: #111111; overflow:auto;width:auto;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-style: italic; background-color: #0f140f">// Written by Jack Crane in 2020 for Mrs. Spencer&#39;s world Religions class. Availible under GNU GPLv3. If you dont know what this means, it doesnt apply to you.</span>
+
+<span style="color: #fb660a; font-weight: bold">const</span> <span style="color: #ffffff">religions</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">{</span>
+  <span style="color: #ffffff">judaism:[</span>
+    <span style="color: #0086d2">&quot;Star of David&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Abraham&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Ten commandments&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Torah (or old testament)&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Temple&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Fasting&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Dietary Restrictions&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Jesus&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Savior is yet to come&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Dress Restrictions&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Pilgrimage&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Rabbis&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Diaspora&quot;</span>
+  <span style="color: #ffffff">],</span>
+  <span style="color: #ffffff">islam:[</span>
+    <span style="color: #0086d2">&quot;Muhammad&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Quran&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Allah&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Five Pillars&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Dress Restrictions&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Pilgrimage&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Hijab&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Caliphs&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Imams&quot;</span>
+  <span style="color: #ffffff">],</span>
+  <span style="color: #ffffff">christianity:[</span>
+    <span style="color: #0086d2">&quot;Monotheistic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Church&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Bible&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;New Testament&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Torah (or old testament)&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Trinity&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Preists&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Jesus&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Cross&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Pope&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Abraham&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Fasting&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Ten commandments&quot;</span>
+  <span style="color: #ffffff">],</span>
+  <span style="color: #ffffff">hinduism:[</span>
+    <span style="color: #0086d2">&quot;Caste system&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Polytheistic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Moksha&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Karma&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Dharma&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Vedas&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Arranged Marriages&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;India&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Reincarnation&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;No supreme being&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Upanishads&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Trinity&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Dietary Restrictions&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Moksha&quot;</span>
+  <span style="color: #ffffff">],</span>
+  <span style="color: #ffffff">buddhism:[</span>
+    <span style="color: #0086d2">&quot;Polytheistic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Nontheistic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Tibets&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Sutras&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Monks&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;India&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Reincarnation&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Nirvana&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Four noble truths&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Way of life&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Meditation&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Eightfold Path&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Siddhartha (Buddha)&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;The Middle Way&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Cyclic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Dharma&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Karma&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;No supreme being&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Dietary Restrictions&quot;</span>
+  <span style="color: #ffffff">],</span>
+  <span style="color: #ffffff">confucianism:[</span>
+    <span style="color: #0086d2">&quot;Confucius&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Monotheistic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Male superiority&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Harmony&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Oriental&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Extends Buddhism&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Temple&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Shrine&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;China&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Virtue&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Character&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Golden rule&quot;</span>
+  <span style="color: #ffffff">],</span>
+  <span style="color: #ffffff">taoism:[</span>
+    <span style="color: #0086d2">&quot;Oriental&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Extends Buddhism&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;China&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Temple&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Shrine&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Balance&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Contemplation&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Polytheistic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Compassion&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Moderation&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Nature&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Lao Tzu&quot;</span>
+  <span style="color: #ffffff">],</span>
+  <span style="color: #ffffff">shintoism:[</span>
+    <span style="color: #0086d2">&quot;Atheistic&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Japan&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Kami&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Spirits&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Altar&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Reflection&quot;</span><span style="color: #ffffff">,</span>
+    <span style="color: #0086d2">&quot;Way of life&quot;</span><span style="color: #ffffff">,</span>
+  <span style="color: #ffffff">]</span>
+<span style="color: #ffffff">}</span>
+
+<span style="color: #fb660a; font-weight: bold">function</span> <span style="color: #ffffff">compareTo(arr1,arr2)</span> <span style="color: #ffffff">{</span>
+  <span style="color: #ffffff">console.log(arr1)</span>
+  <span style="color: #ffffff">console.log(arr2)</span>
+  <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">returns</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">{</span>
+    <span style="color: #ffffff">arr1:[],</span>
+    <span style="color: #ffffff">arr2:[],</span>
+    <span style="color: #ffffff">overlap:[]</span>
+  <span style="color: #ffffff">};</span>
+  <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">overlap</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">[];</span>
+  <span style="color: #fb660a; font-weight: bold">for</span><span style="color: #ffffff">(</span><span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">i</span> <span style="color: #ffffff">=</span> <span style="color: #0086f7; font-weight: bold">0</span><span style="color: #ffffff">;</span> <span style="color: #ffffff">i</span> <span style="color: #ffffff">&lt;</span> <span style="color: #ffffff">arr1.length;</span> <span style="color: #ffffff">i++)</span> <span style="color: #ffffff">{</span>
+    <span style="color: #fb660a; font-weight: bold">if</span><span style="color: #ffffff">(arr2.indexOf(arr1[i])</span> <span style="color: #ffffff">!=</span> <span style="color: #ffffff">-</span><span style="color: #0086f7; font-weight: bold">1</span><span style="color: #ffffff">)</span> <span style="color: #ffffff">{</span>
+      <span style="color: #ffffff">returns.overlap.push(arr1[i]);</span>
+
+    <span style="color: #ffffff">}</span> <span style="color: #fb660a; font-weight: bold">else</span> <span style="color: #ffffff">{</span>
+      <span style="color: #ffffff">returns.arr1.push(arr1[i]);</span>
+    <span style="color: #ffffff">}</span>
+  <span style="color: #ffffff">}</span>
+  <span style="color: #fb660a; font-weight: bold">for</span><span style="color: #ffffff">(</span><span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">i</span> <span style="color: #ffffff">=</span> <span style="color: #0086f7; font-weight: bold">0</span><span style="color: #ffffff">;</span> <span style="color: #ffffff">i</span> <span style="color: #ffffff">&lt;</span> <span style="color: #ffffff">arr2.length;</span> <span style="color: #ffffff">i++)</span> <span style="color: #ffffff">{</span>
+    <span style="color: #fb660a; font-weight: bold">if</span><span style="color: #ffffff">(arr1.indexOf(arr2[i])</span> <span style="color: #ffffff">!=</span> <span style="color: #ffffff">-</span><span style="color: #0086f7; font-weight: bold">1</span><span style="color: #ffffff">)</span> <span style="color: #ffffff">{</span>
+      <span style="color: #ffffff">returns.overlap.push(arr2[i]);</span>
+    <span style="color: #ffffff">}</span> <span style="color: #fb660a; font-weight: bold">else</span> <span style="color: #ffffff">{</span>
+      <span style="color: #ffffff">returns.arr2.push(arr2[i]);</span>
+    <span style="color: #ffffff">}</span>
+  <span style="color: #ffffff">}</span>
+  <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">us</span> <span style="color: #ffffff">=</span> <span style="color: #fb660a; font-weight: bold">new</span> <span style="color: #ffffff">Set(returns.overlap)</span>
+  <span style="color: #ffffff">returns.overlap</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">[...us];</span>
+  <span style="color: #fb660a; font-weight: bold">return</span> <span style="color: #ffffff">returns;</span>
+<span style="color: #ffffff">}</span>
+<span style="color: #ffffff">global_attrs</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">[];</span>
+<span style="color: #fb660a; font-weight: bold">const</span> <span style="color: #ffffff">Venn</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">{</span>
+  <span style="color: #ffffff">update:</span><span style="color: #fb660a; font-weight: bold">function</span><span style="color: #ffffff">()</span> <span style="color: #ffffff">{</span>
+    <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">values</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">{</span>
+      <span style="color: #ffffff">inputOne:document.getElementById(</span><span style="color: #0086d2">&quot;rel1&quot;</span><span style="color: #ffffff">).value,</span>
+      <span style="color: #ffffff">inputTwo:document.getElementById(</span><span style="color: #0086d2">&quot;rel2&quot;</span><span style="color: #ffffff">).value,</span>
+    <span style="color: #ffffff">};</span>
+    <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">elements</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">{</span>
+      <span style="color: #ffffff">left:document.getElementById(</span><span style="color: #0086d2">&quot;left&quot;</span><span style="color: #ffffff">),</span>
+      <span style="color: #ffffff">right:document.getElementById(</span><span style="color: #0086d2">&quot;right&quot;</span><span style="color: #ffffff">),</span>
+      <span style="color: #ffffff">overlap:document.getElementById(</span><span style="color: #0086d2">&quot;overlap&quot;</span><span style="color: #ffffff">),</span>
+      <span style="color: #ffffff">leftTitle:document.getElementById(</span><span style="color: #0086d2">&quot;leftTitle&quot;</span><span style="color: #ffffff">),</span>
+      <span style="color: #ffffff">rightTitle:document.getElementById(</span><span style="color: #0086d2">&quot;rightTitle&quot;</span><span style="color: #ffffff">)</span>
+    <span style="color: #ffffff">}</span>
+    <span style="color: #ffffff">console.log(values);</span>
+    <span style="color: #ffffff">console.log(elements);</span>
+    <span style="color: #ffffff">rightTitle.innerHTML</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">values.inputOne;</span>
+    <span style="color: #ffffff">leftTitle.innerHTML</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">values.inputTwo;</span>
+    <span style="color: #fb660a; font-weight: bold">if</span><span style="color: #ffffff">(values.inputOne</span> <span style="color: #ffffff">&amp;&amp;</span> <span style="color: #ffffff">values.inputTwo</span> <span style="color: #ffffff">!=</span> <span style="color: #0086d2">&quot;default&quot;</span><span style="color: #ffffff">)</span> <span style="color: #ffffff">{</span>
+      <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">attrs</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">compareTo(religions[values.inputOne],religions[values.inputTwo]);</span>
+      <span style="color: #ffffff">global_attrs</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">attrs;</span>
+      <span style="color: #ffffff">console.log(attrs)</span>
+      <span style="color: #ffffff">left.innerHTML</span> <span style="color: #ffffff">=</span> <span style="color: #0086d2">&quot;&quot;</span><span style="color: #ffffff">;</span>
+      <span style="color: #ffffff">right.innerHTML</span> <span style="color: #ffffff">=</span> <span style="color: #0086d2">&quot;&quot;</span><span style="color: #ffffff">;</span>
+      <span style="color: #ffffff">overlap.innerHTML</span> <span style="color: #ffffff">=</span> <span style="color: #0086d2">&quot;&quot;</span><span style="color: #ffffff">;</span>
+      <span style="color: #ffffff">left.appendChild(Venn.arrToList(attrs[</span><span style="color: #0086d2">&quot;arr1&quot;</span><span style="color: #ffffff">]));</span>
+      <span style="color: #ffffff">overlap.appendChild(Venn.arrToList(attrs[</span><span style="color: #0086d2">&quot;overlap&quot;</span><span style="color: #ffffff">]));</span>
+      <span style="color: #ffffff">right.appendChild(Venn.arrToList(attrs[</span><span style="color: #0086d2">&quot;arr2&quot;</span><span style="color: #ffffff">]));</span>
+    <span style="color: #ffffff">}</span>
+  <span style="color: #ffffff">},</span>
+  <span style="color: #ffffff">arrToList:</span><span style="color: #fb660a; font-weight: bold">function</span><span style="color: #ffffff">(arr)</span> <span style="color: #ffffff">{</span>
+    <span style="color: #ffffff">console.log(arr)</span>
+    <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">ul</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">document.createElement(</span><span style="color: #0086d2">&quot;ul&quot;</span><span style="color: #ffffff">);</span>
+    <span style="color: #fb660a; font-weight: bold">for</span><span style="color: #ffffff">(</span><span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">i</span> <span style="color: #ffffff">=</span> <span style="color: #0086f7; font-weight: bold">0</span><span style="color: #ffffff">;</span> <span style="color: #ffffff">i</span> <span style="color: #ffffff">&lt;</span> <span style="color: #ffffff">arr.length;</span> <span style="color: #ffffff">i++)</span> <span style="color: #ffffff">{</span>
+      <span style="color: #fb660a; font-weight: bold">let</span> <span style="color: #ffffff">li</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">document.createElement(</span><span style="color: #0086d2">&quot;li&quot;</span><span style="color: #ffffff">);</span>
+      <span style="color: #ffffff">li.innerHTML</span> <span style="color: #ffffff">=</span> <span style="color: #ffffff">arr[i];</span>
+      <span style="color: #ffffff">ul.appendChild(li)</span>
+    <span style="color: #ffffff">}</span>
+    <span style="color: #fb660a; font-weight: bold">return</span> <span style="color: #ffffff">ul;</span>
+  <span style="color: #ffffff">}</span>
+<span style="color: #ffffff">}</span>
+</pre></div>
