@@ -12,7 +12,7 @@ function showDesc(e) {
 
 showDesc(".desc-default");
 
-function selectDesc(arr) {
+function selectDesc(arr,breadcrumb) {
   console.log(arr)
   let optionsi = document.querySelectorAll(options);
   for(let i = 0; i < optionsi.length; i++) {
@@ -22,6 +22,10 @@ function selectDesc(arr) {
     document.querySelector(arr[i]).style.display="block";
   }
   showDesc(".desc-default");
+}
+
+function calc() {
+
 }
 
 selectDesc(['.btn-one','.btn-two']);

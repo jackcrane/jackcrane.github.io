@@ -1,0 +1,113 @@
+body, html {
+  padding:0;
+  margin:0;
+}
+
+* {
+  font-family: 'Raleway', serif;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.hero {
+  background-image: url("steak-splash-min.jpg");
+  background-color: #cccccc;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero .text {
+  /* text-align: center; */
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  transform: translate(-20%, -35%);
+  color: white;
+  font-family:sans-serif;
+}
+
+.hero .text h1 {
+
+  font-size:5rem;
+}
+
+.btn{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  border:2px solid #fda;
+  color:#fda;
+  font-family: 'Cormorant Garamond', serif;
+  font-style:italic;
+  font-size:30px;
+  text-decoration:none;
+  margin:20px auto;
+  transition: color 0.4s
+}
+.btn:after{
+  content:" ";
+  border:2px solid rgba(0,0,0,0);
+  display:inline-block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  transition:all 0.4s;
+}
+.btn:hover{
+  color:#eee
+}
+.btn:hover:after{
+  border:2px solid #fda;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
+}
+
+.menu-body {
+  width:50%;
+  text-align:left;
+}
+
+.menu-body hr {
+  border:3px solid black;
+  margin-left:0;
+  width:15%;
+  margin-block-end: 1em;
+}
+
+.logo {
+  max-width:50%;
+}
+
+@media print {
+  .logo {
+    width:25%;
+    float:left;
+  }
+  .ltext {
+    float:right;
+  }
+  .l::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .menu-body {
+    width:100%;
+  }
+}
+
+@media screen and (max-width:660px) {
+  .hero .text h1 {
+    font-size:4rem;
+  }
+}

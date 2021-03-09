@@ -11,17 +11,26 @@
     <div class="clearfix padded">
       <div class="left vcp options">
         <div class="vcc hc">
-          <div class="btn-card btn-one" onmouseover="showDesc('.desc-a')" onclick="selectDesc(['.btn-three','.btn-four']);path.push('btn-one')">
+          <div class="btn-card btn-one" onmouseover="showDesc('.desc-a')" onclick="selectDesc(['.btn-three','.btn-four']);path.push('staticSite')">
             <h3>I want a static site</h3>
           </div>
-          <div class="btn-card btn-two" onmouseover="showDesc('.desc-b')" onclick="selectDesc(['.btn-three','.btn-four']);path.push('btn-two')">
+          <div class="btn-card btn-two" onmouseover="showDesc('.desc-b')" onclick="selectDesc(['.btn-three','.btn-four']);path.push('dynamicSite')">
             <h3>I want a dynamic site</h3>
           </div>
-          <div class="btn-card btn-three" onmouseover="showDesc('.desc-c')" onclick="selectDesc(['.btn-three','.btn-four']);path.push('btn-three')">
-            <h3>I want a small site</h3>
+          <div class="btn-card btn-three" onmouseover="showDesc('.desc-e')" onclick="selectDesc(['.btn-five','.btn-six']);path.push('advancedSEO')">
+            <h3>I want advanced SEO</h3>
           </div>
-          <div class="btn-card btn-four" onmouseover="showDesc('.desc-d')" onclick="selectDesc(['.btn-three','.btn-four']);path.push('btn-four')">
-            <h3>I want a large site</h3>
+          <div class="btn-card btn-four" onmouseover="showDesc('.desc-e')" onclick="selectDesc(['.btn-five','.btn-six']);path.push('basicSEO')">
+            <h3>I do not want advanced SEO</h3>
+          </div>
+          <div class="btn-card btn-five" onmouseover="showDesc('.desc-f')" onclick="selectDesc(['.btn-seven']);path.push('forms');showDesc('.otherOptions')">
+            <h3>I want custom form functionality</h3>
+          </div>
+          <div class="btn-card btn-six" onmouseover="showDesc('.desc-f')" onclick="selectDesc(['.btn-seven']);path.push('noForms');showDesc('.otherOptions')">
+            <h3>I do not want custom form functionality</h3>
+          </div>
+          <div class="btn-card btn-seven">
+            <h3>Select other options</h3>
           </div>
         </div>
       </div>
@@ -69,42 +78,40 @@
               </ul>
               <p>My base price for a dynamic website is $500, with ~$50 monthly operational costs</p>
             </div>
-            <div class="desc-c desc">
-              <h1>What is classified as a small website?</h1>
-              <p>A small website consists of less than 10 pages.</p>
-              <p>Website size is not a commitment; your website can start small and grow as you need it to grow</p>
-            </div>
-            <div class="desc-d desc">
-              <h1>What is classified as a large website?</h1>
-              <p>A website that contains greater than 10 pages.</p>
-              <p>Website size is not a commitment; your website can start small and grow as you need it to grow</p>
-            </div>
             <div class="desc-e desc">
-              <h1>What is a template?</h1>
-              <p>I create my own templates that I use for clients who want them. I will make sure that the template does not look or feel like a template. It will be fully populated with your images, logos, and text</p>
+              <h1>What is SEO?</h1>
+              <p>SEO stands for Search Engine Optimization and controls what shows on Google. Basic SEO comes standard with all my websites, but if you want a truly custom experience for your customers on Google, consider advanced SEO.</p>
               <h3>Pros:</h3>
               <ul>
-                <li>Keeps costs down</li>
-                <li>Keeps maintnance simple</li>
+                <li>May improve your ranking in search engines like Google</li>
               </ul>
               <h3>Cons:</h3>
               <ul>
-                <li>It is not custom, thus it may be a struggle to get it to fit your needs</li>
+                <li>Is a <i>LOT</i> of work, so will drastically increase your costs.</li>
               </ul>
-              <p>I strongly recommend templates. I offer many templates, so we can work to be sure one fits your needs. Templating does not add any cost to you estimate.</p>
             </div>
             <div class="desc-f desc">
-              <h1>What is a template?</h1>
-              <p>Going custom is a great way to set yourself apart. I will work with you on the design and development of your site to make sure it fits your dreams</p>
+              <h1>What are custom forms</h1>
+              <p>Custom forms are a great way to interact with your users. It will allow your users to contact you through your website.</p>
               <h3>Pros:</h3>
               <ul>
-                <li>100% creative freedom</li>
+                <li>Will enable you to create custom, personalized interactions with your customers</li>
               </ul>
               <h3>Cons:</h3>
               <ul>
-                <li>Is very expensive, and will yield slower turnaround times.</li>
+                <li>Forms are complex and require a lot of work on your end to monitor. They should not be used when not necessary</li>
               </ul>
-              <p>Should you decide to go custom, expect to be paying $10-$100 per page.</p>
+              <p>* Be aware that by using custom forms, your customers submissions will be going through a third party.</p>
+            </div>
+            <div class="otherOptions desc">
+              <h1>Choose other options:</h1>
+              <div>
+                <input type="checkbox" id="cbox-1"> <label for="cbox-1">Google Analytics</label><br>
+                <input type="checkbox" id="cbox-2"> <label for="cbox-2">Google Maps widget</label><br>
+                <input type="checkbox" id="cbox-3"> <label for="cbox-3">Dynamic Open Hours</label><br />
+                <input type="checkbox" id="cbox-4"> <label for="cbox-4">Image carousel</label><br />
+              </div>
+              <button onclick="calc()">Calculate your cost!</button>
             </div>
           </div>
         </div>

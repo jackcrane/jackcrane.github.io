@@ -1,0 +1,13 @@
+{
+	"doctype": {
+		"regex": "(<head>)?(<!doctype html>)?(</head>)",
+		"regex_modifiers": "i",
+		"importance": "critical",
+		"docs": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5#declaring_that_the_document_contains_html5_mark-up_with_the_html5_doctype",
+    "zone":"head",
+    "description":"The Doctype is HTML5 and is at the top of all your HTML pages"
+	},
+  "charset": {
+    "regex": ""
+  }
+}
