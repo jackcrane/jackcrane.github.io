@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fullscreen, nonmutable image</title>
+  <style media="screen">
+    body, html, #a, #b {
+      overscroll-behavior:none;
+      overflow:hidden;
+      padding:0;
+      font-family:sans-serif;
+      margin:0;
+    }
+    body, html, #a {
+      height:100vh;
+      width:100%;
+    }
+    #a {
+      padding:2%;
+      font-size:20px;
+    }
+    input {
+      font-size:20px;
+    }
+    #b {
+      display:none;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <section id="a">
+    <input type="file" onchange="handleInput(this)">
+    <p>Your images do not leave your computer. They will never be transmitted or sent anywhere.</p>
+    <p>If you wish to upload a different image, simply reload the page.</p>
+    <h2>If you wish to hide the toolbar on IOS:</h2>
+    <img src="https://images.macrumors.com/t/pVdlcnMd2NOTa21t_CoUrbWZzd8=/1600x0/filters:quality(90)/article-new/2019/07/how-to-hide-the-toolbar-in-safari-ios.jpg" width="500px" alt="">
+  </section>
+  <section id="b">
+    <img src="" id="i">
+  </section>
+</body>
+<script type="text/javascript">
+  function handleInput(e) {
+    document.getElementById('a').style.display = 'none';
+    // document.getElementById('i').src = window.URL.createObjectURL(e.files[0]);
+    document.getElementById('b').style.backgroundImage = `url(${window.URL.createObjectURL(e.files[0])})`
+    document.getElementById('b').style.display = 'block';
+  }
+</script>
+</html>
