@@ -1,5 +1,0 @@
-@echo OFF
-curl "http://api.ipify.org" > ip.txt
-set /p Build=<ip.txt
-echo %Build%
-curl "http://jack-app.000webhostapp.com/postip.php" -H "Connection: keep-alive" -H "Cache-Control: max-age=0" -H "Origin: http://jack-app.000webhostapp.com" -H "Upgrade-Insecure-Requests: 1" -H "DNT: 1" -H "Content-Type: application/x-www-form-urlencoded" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36" -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3" -H "Referer: http://jack-app.000webhostapp.com/test.html" -H "Accept-Encoding: gzip, deflate" -H "Accept-Language: en-US,en;q=0.9,la;q=0.8" -H "Cookie: hgr-popup-closed=expires = 1556495634528; _ga=GA1.2.777852073.1556489719; _gid=GA1.2.1735688332.1556489719; _omappvp=L6OMc6D7ryK02oqGg41xz7HueAgvEo8m6XTfCTMutvr1X59ANi81TIqjB5H3RP8IlbqnubYs0oka9pfs85xNNiA4BqfJfhIL" --data "ipaddr=%Build%"
